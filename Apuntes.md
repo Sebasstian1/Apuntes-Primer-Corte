@@ -100,7 +100,7 @@ $$
    s^3 + 2s + 3 = (A + B)s^2 + (2A + B + C)s + (2A + C)
    $$
 
-3. Igualamos coeficientes de $$s^2$$, $$s$$ y términos constantes:
+3. Igualamos coeficientes y términos constantes:
    
    $$
    A + B = 1
@@ -198,4 +198,4 @@ $$
 
 ---
 
-Estos dos ejercicios adicionales cubren tanto una transformada de Laplace directa como una inversa. Si tienes más ejercicios o necesitas más ejemplos, ¡no dudes en pedírmelo!
+Estos dos ejercicios adicionales cubren tanto una transformada de Laplace directa como una inversa.
