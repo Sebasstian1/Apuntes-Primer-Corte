@@ -173,29 +173,124 @@ $$
 Encuentra la transformada inversa de la siguiente función en el dominio de \( s \):
 
 $$
-F(s) = \frac{5}{s^2 + 9}
+F(s) = \frac{10}{(s+1)(s^2 + 4s + 5)}
 $$
 
 **Solución:**
 
-Sabemos que la transformada de Laplace de una función del tipo:
+Primero, vamos a descomponer la función \( F(s) \) en fracciones parciales. Consideramos la expresión:
 
 $$
-\sin(at)
+\frac{10}{(s+1)(s^2 + 4s + 5)}
 $$
 
-es:
+Sabemos que podemos escribir esta fracción como una suma de términos de la forma:
 
 $$
-\mathcal{L}\{\sin(at)\} = \frac{a}{s^2 + a^2}
+\frac{10}{(s+1)(s^2 + 4s + 5)} = \frac{A}{s+1} + \frac{Bs + C}{s^2 + 4s + 5}
 $$
 
-En este caso, tenemos que \( a = 3 \), por lo que la transformada inversa de \( F(s) = \frac{5}{s^2 + 9} \) es:
+Multiplicamos ambos lados por \( (s+1)(s^2 + 4s + 5) \) para eliminar los denominadores:
 
 $$
-f(t) = \frac{5}{3} \sin(3t)
+10 = A(s^2 + 4s + 5) + (Bs + C)(s+1)
 $$
 
----
+Expandimos ambos lados:
 
-Estos dos ejercicios adicionales cubren tanto una transformada de Laplace directa como una inversa. Si tienes más ejercicios o necesitas más ejemplos, ¡no dudes en pedírmelo!
+$$
+10 = A(s^2 + 4s + 5) + Bs(s+1) + C(s+1)
+$$
+
+$$
+10 = A s^2 + 4A s + 5A + B s^2 + B s + C s + C
+$$
+
+Agrupamos los términos similares:
+
+$$
+10 = (A + B) s^2 + (4A + B + C) s + (5A + C)
+$$
+
+Ahora igualamos los coeficientes de los términos de \( s^2 \), \( s \), y el término constante con el lado derecho, que es 10:
+
+1. Para \( s^2 \): \( A + B = 0 \)
+2. Para \( s \): \( 4A + B + C = 0 \)
+3. Para el término constante: \( 5A + C = 10 \)
+
+Resolvemos este sistema de ecuaciones:
+
+- De \( A + B = 0 \), obtenemos \( B = -A \).
+- Sustituimos \( B = -A \) en la segunda ecuación \( 4A + B + C = 0 \):
+
+$$
+4A - A + C = 0 \implies 3A + C = 0 \implies C = -3A
+$$
+
+- Sustituimos \( C = -3A \) en la tercera ecuación \( 5A + C = 10 \):
+
+$$
+5A - 3A = 10 \implies 2A = 10 \implies A = 5
+$$
+
+- Como \( A = 5 \), entonces:
+
+$$
+B = -5 \quad \text{y} \quad C = -15
+$$
+
+Así, la descomposición en fracciones parciales es:
+
+$$
+\frac{10}{(s+1)(s^2 + 4s + 5)} = \frac{5}{s+1} + \frac{-5s - 15}{s^2 + 4s + 5}
+$$
+
+Ahora aplicamos la transformada inversa de Laplace a cada término por separado:
+
+1. Para el término \( \frac{5}{s+1} \), sabemos que la transformada inversa es:
+
+$$
+\mathcal{L}^{-1}\left\{ \frac{5}{s+1} \right\} = 5 e^{-t}
+$$
+
+2. Para el término \( \frac{-5s - 15}{s^2 + 4s + 5} \), primero reescribimos el denominador como:
+
+$$
+s^2 + 4s + 5 = (s+2)^2 + 1
+$$
+
+Entonces, tenemos que:
+
+$$
+\frac{-5s - 15}{s^2 + 4s + 5} = \frac{-5(s+2) + (-5)}{(s+2)^2 + 1}
+$$
+
+Ahora, descomponemos esto en dos términos:
+
+$$
+\frac{-5(s+2)}{(s+2)^2 + 1} + \frac{-5}{(s+2)^2 + 1}
+$$
+
+Sabemos que la transformada inversa de \( \frac{s+a}{(s+a)^2 + b^2} \) es \( e^{-at} \cos(bt) \), y que la transformada inversa de \( \frac{b}{(s+a)^2 + b^2} \) es \( e^{-at} \sin(bt) \).
+
+Aplicando estas fórmulas, obtenemos:
+
+- Para \( \frac{-5(s+2)}{(s+2)^2 + 1} \), la transformada inversa es:
+
+$$
+-5 e^{-2t} \cos(t)
+$$
+
+- Para \( \frac{-5}{(s+2)^2 + 1} \), la transformada inversa es:
+
+$$
+-5 e^{-2t} \sin(t)
+$$
+
+Por lo tanto, la transformada inversa completa es:
+
+$$
+f(t) = 5 e^{-t} - 5 e^{-2t} \cos(t) - 5 e^{-2t} \sin(t)
+$$
+
+Este es el resultado final de la transformada inversa.
