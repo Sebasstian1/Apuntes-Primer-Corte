@@ -149,5 +149,3 @@ En este caso, tenemos que $a = 3$, por lo que la transformada inversa de $F(s) =
 $f(t) = \frac{5}{3} \sin(3t)$
 
 ---
-
-Estos dos ejercicios adicionales cubren tanto una transformada de Laplace directa como una inversa. Si tienes más ejercicios o necesitas más ejemplos, ¡no dudes en pedírmelo!
