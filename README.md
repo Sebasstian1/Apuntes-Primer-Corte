@@ -84,35 +84,35 @@ $$
 \frac{s^3 + 2s + 3}{(s+1)(s^2+2s+2)} = \frac{2}{s+1} + \frac{-s-1}{s^2+2s+2}
 $$
 
-1. Multiplicamos ambos lados por $$(s+1)(s^2+2s+2)$$ y obtenemos:
-   
-   $$
-   s^3 + 2s + 3 = A(s^2 + 2s + 2) + (B s + C)(s+1)
-   $$
+1. Multiplicamos ambos lados por \( (s+1)(s^2+2s+2) \) y obtenemos:
+
+$$
+s^3 + 2s + 3 = A(s^2 + 2s + 2) + (Bs + C)(s+1)
+$$
 
 2. Expandimos y agrupamos términos:
 
-   $$
-   s^3 + 2s + 3 = (A s^2 + 2A s + 2A) + (B s^2 + (B + C) s + C)
-   $$
+$$
+s^3 + 2s + 3 = A(s^2 + 2s + 2) + (Bs^2 + (B + C)s + C)
+$$
 
-   $$
-   s^3 + 2s + 3 = (A + B)s^2 + (2A + B + C)s + (2A + C)
-   $$
+$$
+s^3 + 2s + 3 = (A + B)s^2 + (2A + B + C)s + (2A + C)
+$$
 
 3. Igualamos coeficientes y términos constantes:
-   
-   $$
-   A + B = 1
-   $$
 
-   $$
-   2A + B + C = 2
-   $$
+$$
+A + B = 1
+$$
 
-   $$
-   2A + C = 3
-   $$
+$$
+2A + B + C = 2
+$$
+
+$$
+2A + C = 3
+$$
 
 4. Resolviendo el sistema de ecuaciones obtenemos:
 
@@ -123,7 +123,7 @@ $$
 5. Transformada inversa de Laplace:
 
 $$
-x(t) = 2 e^{-t} - e^{-t} \cos(t)
+x(t) = 2e^{-t} - e^{-t}\cos(t)
 $$
 
 ---
