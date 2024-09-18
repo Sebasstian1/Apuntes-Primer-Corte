@@ -1,165 +1,75 @@
 # Dinámica de Sistemas
 
-## Pre-requisitos
-- Ecuaciones Diferenciales
+La dinámica de sistemas es una rama de la ingeniería que se enfoca en modelar, analizar y controlar sistemas dinámicos, los cuales cambian su comportamiento en el tiempo. En esta clase, se explorarán conceptos clave relacionados con las ecuaciones diferenciales, transformadas y técnicas de análisis de sistemas dinámicos. Estas herramientas son fundamentales para comprender cómo los sistemas responden ante diferentes estímulos.
 
-## Software
-- Matlab
-- Simulador de Circuitos
+## 1. Introducción
 
-## Contenido
-- Definiciones
-- Solución de Ecuaciones Diferenciales (Transformada de la Laplace)
-- Modelamiento Matemático
-  - Mecánica
-  - Eléctrica
-  - Hidráulica
-  - Térmica
-- Funcional de Transferencia
-- Diagramas de Bloques
-  - Álgebra de Bloques
-  - Diagramas de Flechas
-  - Fórmula de Mason
-- Análisis de Sistemas 1er y 2do Orden
+En esta clase, cubriremos los conceptos básicos de derivadas parciales y transformada de Laplace, los cuales son esenciales para resolver ecuaciones diferenciales en el contexto de sistemas dinámicos. Asimismo, abordaremos un ejemplo de cómo trabajar con sistemas complejos utilizando matrices.
 
-## Evaluación
-- Autoevaluación: 10%
-- Coevaluación: 10%
-- Parcial: 40%
-- Tareas: 30%
-- Apuntes: 10%
+## 2. Definiciones
 
-## Bibliografía
-- **Sistemas Dinámicos** - Ogata
-- **Ingeniería de Control Moderna** - Ogata
-- **Control Automático de Procesos** - Smith y Corripio
+🔑 **Derivada parcial**: la derivada de una función con respecto a una variable, manteniendo las demás constantes.
 
-## Apuntes
-- Plantilla (Markdown), Completos, 2 ejercicios Aparte
-- GitHub → Entrega
+> Las derivadas parciales se denotan como:  
+> $$ \frac{\partial f}{\partial x} $$
 
----
+🔑 **Transformada de Laplace**: herramienta que convierte ecuaciones diferenciales en ecuaciones algebraicas, facilitando su resolución en el dominio de la frecuencia.
 
-### Derivadas
+> La transformada de Laplace de una función \( f(t) \) está definida como:  
+> $$ L\{f(t)\} = \int_{0}^{\infty} f(t) e^{-st} dt $$
 
-$\lim_{{h \to 0}} \frac{{f(x+h) - f(x)}}{h}$
+## 3. Teoría
 
-$f(x) = x^2$
+### 3.1 Derivadas parciales
+Las derivadas parciales son fundamentales para describir sistemas dinámicos cuando las variables dependen de más de un parámetro. A continuación se presentan algunas de las fórmulas clave.
 
-$\frac{d}{dx} f(x) = 2x$
+💡 Ejemplo 1: Derivada parcial de una función \( f(x, t) \)
+$$ \frac{\partial}{\partial t} f = \alpha \frac{\partial}{\partial x} f + \beta f(x) $$
 
-$\frac{d}{dt} f(t) + a_1 \frac{d}{dt} f(t) + a_n f(t) = u(t)$
+### 3.2 Transformada de Laplace
+La transformada de Laplace es una técnica importante para la solución de ecuaciones diferenciales. Es útil para sistemas lineales y puede simplificar problemas que involucran derivadas.
 
-O en notación con puntos para derivadas:
+💡 Ejemplo 2: Si tenemos una función \( x(t) \), su transformada de Laplace es:
+$$ X(s) = \int_{0}^{\infty} x(t) e^{-st} dt $$
 
-$\dot{f}(t) + a_1 \dot{f}(t) + a_n f(t) = u(t)$
+### 3.3 Ecuaciones diferenciales con matrices
+En sistemas más complejos, como los representados por varias ecuaciones diferenciales interconectadas, es común utilizar matrices para organizarlas.
 
----
-
-### Transformada de la Laplace
-
-$X(s) = \int_0^{\infty} x(t) e^{-st} dt$
-
-$f(t) \rightarrow F(s)$
-
-$\frac{1}{s^2} \quad \frac{1}{(s-a)} \quad \frac{A}{s} + \frac{B}{s^2}$
-
----
-
-### Ejemplo de Fracciones Parciales
-
-$\frac{s^3 + 2s + 3}{(s+1)(s^2+2s+2)} = \frac{2}{s+1} + \frac{-s-1}{s^2+2s+2}$
-
-1. Multiplicamos ambos lados por $(s+1)(s^2+2s+2)$ y obtenemos:
-   
-   $s^3 + 2s + 3 = A(s^2 + 2s + 2) + (B s + C)(s+1)$
-
-2. Expandimos y agrupamos términos:
-
-   $s^3 + 2s + 3 = (A s^2 + 2A s + 2A) + (B s^2 + (B + C) s + C)$
-
-   $s^3 + 2s + 3 = (A + B)s^2 + (2A + B + C)s + (2A + C)$
-
-3. Igualamos coeficientes y términos constantes:
-   
-   $A + B = 1$
-
-   $2A + B + C = 2$
-
-   $2A + C = 3$
-
-4. Resolviendo el sistema de ecuaciones obtenemos:
-
-   $A = 2, \quad B = -1, \quad C = -1$
-
-5. Transformada inversa de Laplace:
-
-$x(t) = 2 e^{-t} - e^{-t} \cos(t)$
-
----
-
-## **Ejercicios Extras**
-
-### Ejercicio 1: Transformada de Laplace
-
-Dada la siguiente función en el dominio del tiempo:
-
-$f(t) = 3 e^{-2t} \sin(4t)$
-
-Encuentra su transformada de Laplace.
-
-**Solución:**
-
-Sabemos que la transformada de Laplace de una función del tipo:
-
-$e^{at} \sin(bt)$
-
-es:
-
+💡 Ejemplo 3:
 $$
-\mathcal{L}\{e^{at} \sin(bt)\} = \frac{b}{(s - a)^2 + b^2}
+A \cdot X(s) = B \cdot U(s) + C \cdot Y(s)
 $$
+Donde:
+- \( A, B, C \) son matrices.
+- \( X(s), U(s), Y(s) \) son vectores de las variables en el dominio de la frecuencia.
 
-En este caso, tenemos $a = -2$ y $b = 4$, por lo tanto, la transformada de $f(t) = 3 e^{-2t} \sin(4t)$ es:
+### 3.4 Eliminación de variables
+En algunos casos, se deben eliminar variables para simplificar la resolución de las ecuaciones. Por ejemplo, se pueden reordenar las ecuaciones para expresar una variable en función de otras y resolver el sistema paso a paso.
 
-$$
-\mathcal{L}\{f(t)\} = 3 \cdot \frac{4}{(s + 2)^2 + 4^2}
-$$
+💡 Ejemplo 4: Eliminación de variables en un sistema de ecuaciones
+$$ X(s) = A(s) \cdot U(s) - B(s) \cdot Y(s) $$
 
-Simplificando:
+## 4. Ejemplos
 
-$$
-\mathcal{L}\{f(t)\} = \frac{12}{(s + 2)^2 + 16}
-$$
+💡 Ejemplo 5:
+Resuelve el siguiente sistema utilizando matrices:
+\[
+\begin{align*}
+2s U & = A(s_1 + s_2)(s - 1) + B(s_3)(s - 3) \\
+2s U & = A(s_1s_2 - 3s) + B(s_4s_5) + C(s_2 + 4)
+\end{align*}
+\]
 
----
+### Solución:
+\[
+U(s) = A \left( s_1 - 2 \right) + B \left( s_3(s - 1) \right) + C \left( s(s_2) \right)
+\]
 
-### Ejercicio 2: Transformada Inversa de Laplace
+## 5. Conclusiones
 
-Encuentra la transformada inversa de la siguiente función en el dominio de $s$:
+En esta clase hemos revisado las herramientas básicas para trabajar con sistemas dinámicos. Desde el cálculo de derivadas parciales hasta la aplicación de la transformada de Laplace, estas técnicas permiten abordar ecuaciones complejas de manera eficiente. En la próxima clase, profundizaremos en el análisis de sistemas de primer y segundo orden.
 
-$F(s) = \frac{5}{s^2 + 9}$
+## 6. Referencias
 
-**Solución:**
-
-Sabemos que la transformada de Laplace de una función del tipo:
-
-$$
-\sin(at)
-$$
-
-es:
-
-$$
-\mathcal{L}\{\sin(at)\} = \frac{a}{s^2 + a^2}
-$$
-
-En este caso, tenemos que $a = 3$, por lo que la transformada inversa de $F(s) = \frac{5}{s^2 + 9}$ es:
-
-$$
-f(t) = \frac{5}{3} \sin(3t)
-$$
-
----
-
-Estos dos ejercicios adicionales cubren tanto una transformada de Laplace directa como una inversa. Si tienes más ejercicios o necesitas más ejemplos, ¡no dudes en pedírmelo!
+- Ogata, K. *Ingeniería de Control Moderna*.
+- Smith, C. A., & Corripio, A. B. *Control Automático de Procesos*.
