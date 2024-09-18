@@ -88,15 +88,15 @@ $$
 2s^2 - 4 = (A + B + C)s^2 + (-5A - 2B - C)s + (6A - 3B - 2C)
 $$
 
-Comparando los coeficientes con \(2s^2 - 4\):
+Comparando los coeficientes con (2s^2 - 4):
 
-1. Coeficiente de \(s^2\):
+1. Coeficiente de (s^2):
 
    $$
    A + B + C = 2
    $$
 
-2. Coeficiente de \(s\):
+2. Coeficiente de (s):
 
    $$
    -5A - 2B - C = 0
@@ -104,13 +104,13 @@ Comparando los coeficientes con \(2s^2 - 4\):
 
 3. Término constante:
 
-   $$
+   $$ 
    6A - 3B - 2C = -4
    $$
 
 Resolvemos este sistema de ecuaciones:
 
-De \(A + B + C = 2\):
+De \(A + B + C = 2):
 
 $$
 C = 2 - A - B
