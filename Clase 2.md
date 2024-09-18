@@ -236,6 +236,7 @@ $$
 
 
 
+
 ## 5. Conclusiones
 
 En esta clase hemos revisado las herramientas básicas para trabajar con sistemas dinámicos. Desde el cálculo de derivadas parciales hasta la aplicación de la transformada de Laplace, estas técnicas permiten abordar ecuaciones complejas de manera eficiente. En la próxima clase, profundizaremos en el análisis de sistemas de primer y segundo orden.
