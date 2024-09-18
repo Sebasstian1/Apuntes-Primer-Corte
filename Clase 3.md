@@ -18,7 +18,10 @@ Multiplicamos ambos lados por el denominador común y agrupamos términos simila
 
 Resolviendo para \(A\), \(B\), \(C\) y \(D\), obtenemos:
 
-\[ A = 1, \quad B = 1, \quad C = -1, \quad D = 2 \]
+\[ A = 1 \]
+\[ B = 1 \]
+\[ C = -1 \]
+\[ D = 2 \]
 
 Por lo tanto:
 
@@ -30,15 +33,21 @@ Para encontrar la transformada inversa de Laplace, utilizamos tablas estándar:
 
 - Para \( \frac{s + 1}{s^2 + 2s + 2} \):
 
-  \[ \mathcal{L}^{-1} \left\{ \frac{s + 1}{s^2 + 2s + 2} \right\} = e^{-t} \cos(t) \]
+  \[
+  \mathcal{L}^{-1} \left\{ \frac{s + 1}{s^2 + 2s + 2} \right\} = e^{-t} \cos(t)
+  \]
 
 - Para \( \frac{s - 2}{s^2 + 2s + 5} \):
 
-  \[ \mathcal{L}^{-1} \left\{ \frac{s - 2}{s^2 + 2s + 5} \right\} = e^{-t} \left[ \cos(2t) + \frac{1}{2} \sin(2t) \right] \]
+  \[
+  \mathcal{L}^{-1} \left\{ \frac{s - 2}{s^2 + 2s + 5} \right\} = e^{-t} \left[ \cos(2t) + \frac{1}{2} \sin(2t) \right]
+  \]
 
 Entonces, la transformada inversa completa es:
 
-\[ \mathcal{L}^{-1} \left\{ \frac{s^2 + 2s + 3}{(s^2 + 2s + 2)(s^2 + 2s + 5)} \right\} = e^{-t} \cos(t) - e^{-t} \left[ \cos(2t) + \frac{1}{2} \sin(2t) \right] \]
+\[
+\mathcal{L}^{-1} \left\{ \frac{s^2 + 2s + 3}{(s^2 + 2s + 2)(s^2 + 2s + 5)} \right\} = e^{-t} \cos(t) - e^{-t} \left[ \cos(2t) + \frac{1}{2} \sin(2t) \right]
+\]
 
 ## Ejercicio 2
 
@@ -58,7 +67,8 @@ Multiplicamos ambos lados por el denominador común y resolvemos para \(A\) y \(
 
 Resolviendo para \(A\) y \(B\), obtenemos:
 
-\[ A = 1, \quad B = 2 \]
+\[ A = 1 \]
+\[ B = 2 \]
 
 Por lo tanto:
 
@@ -70,12 +80,18 @@ Para encontrar la transformada inversa de Laplace, utilizamos tablas estándar:
 
 - Para \( \frac{1}{s + 1} \):
 
-  \[ \mathcal{L}^{-1} \left\{ \frac{1}{s + 1} \right\} = e^{-t} \]
+  \[
+  \mathcal{L}^{-1} \left\{ \frac{1}{s + 1} \right\} = e^{-t}
+  \]
 
 - Para \( \frac{2}{s + 2} \):
 
-  \[ \mathcal{L}^{-1} \left\{ \frac{2}{s + 2} \right\} = 2e^{-2t} \]
+  \[
+  \mathcal{L}^{-1} \left\{ \frac{2}{s + 2} \right\} = 2e^{-2t}
+  \]
 
 Entonces, la transformada inversa completa es:
 
-\[ \mathcal{L}^{-1} \left\{ \frac{s + 3}{(s + 1)(s + 2)} \right\} = e^{-t} + 2e^{-2t} \]
+\[
+\mathcal{L}^{-1} \left\{ \frac{s + 3}{(s + 1)(s + 2)} \right\} = e^{-t} + 2e^{-2t}
+\]
