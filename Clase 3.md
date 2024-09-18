@@ -1,5 +1,7 @@
 # Resolución de Ecuaciones por Fracciones Parciales y Transformada Inversa de Laplace
 
+En esta clase realizamos dos ejercicios para practicar la descomposición en fracciones parciales y la transformada inversa de Laplace. El primer ejercicio involucra una función con denominadores cuadráticos y el segundo una función con denominadores lineales. A través de estos ejercicios, aplicamos los conceptos teóricos para resolver problemas prácticos de transformadas y fracciones parciales.
+
 ## Ejercicio 1
 
 Dada la función:
@@ -83,3 +85,13 @@ Para encontrar la transformada inversa de Laplace:
 Entonces, la transformada inversa completa es:
 
     L^-1{(s + 3) / [(s + 1)(s + 2)]} = e^(-t) + 2 * e^(-2t)
+
+## Conclusiones
+
+1. **Aplicación de Fracciones Parciales:** La descomposición en fracciones parciales permite simplificar funciones racionales complejas en componentes más manejables, facilitando la resolución de ecuaciones diferenciales y la aplicación de transformadas.
+
+2. **Transformada Inversa de Laplace:** La transformada inversa de Laplace nos proporciona la solución en el dominio del tiempo a partir de la función en el dominio de Laplace. Es crucial para el análisis y diseño de sistemas en ingeniería y matemáticas aplicadas.
+
+3. **Interpretación de Resultados:** La correcta descomposición y aplicación de las transformadas inversas nos ayuda a entender mejor el comportamiento temporal de los sistemas descritos por las funciones racionales, permitiendo una mejor modelación y análisis de sistemas dinámicos.
+
+Estos ejercicios refuerzan la comprensión de cómo las herramientas matemáticas avanzadas pueden aplicarse a problemas prácticos y teóricos en ingeniería y ciencias aplicadas.
