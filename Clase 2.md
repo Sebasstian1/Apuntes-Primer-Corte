@@ -165,4 +165,4 @@ En esta clase hemos revisado las herramientas básicas para trabajar con sistema
 ## 6. Referencias
 
 - Ogata, K. *Ingeniería de Control Moderna*.
-- Smith, C. A., & Corripio, A
+- Smith, C. A., & Corripio, A. B. *Control Automático de Procesos*.
