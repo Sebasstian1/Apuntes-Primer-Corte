@@ -80,15 +80,15 @@ $$ 2s^2 - 4 = (A + B + C)s^2 + (-5A - 2B - C)s + (6A - 3B - 2C) $$
 
 Comparando los coeficientes con \(2s^2 - 4\):
 
-1. Coeficiente de \(s^2\):
+1. **Coeficiente de \(s^2\)**:
 
    $$ A + B + C = 2 $$
 
-2. Coeficiente de \(s\):
+2. **Coeficiente de \(s\)**:
 
    $$ -5A - 2B - C = 0 $$
 
-3. Término constante:
+3. **Término constante**:
 
    $$ 6A - 3B - 2C = -4 $$
 
@@ -100,19 +100,17 @@ $$ C = 2 - A - B $$
 
 Sustituyendo en las otras dos ecuaciones:
 
-$$ -5A - 2B - (2 - A - B) = 0 $$
+- Para el coeficiente de \(s\):
 
-$$ -5A - 2B - 2 + A + B = 0 $$
+   $$ -5A - 2B - (2 - A - B) = 0 $$
+   $$ -5A - 2B - 2 + A + B = 0 $$
+   $$ -4A - B = 2 $$
 
-$$ -4A - B = 2 $$
+- Para el término constante:
 
-Y:
-
-$$ 6A - 3B - 2(2 - A - B) = -4 $$
-
-$$ 6A - 3B - 4 + 2A + 2B = -4 $$
-
-$$ 8A - B = 0 $$
+   $$ 6A - 3B - 2(2 - A - B) = -4 $$
+   $$ 6A - 3B - 4 + 2A + 2B = -4 $$
+   $$ 8A - B = 0 $$
 
 Resolviendo el sistema:
 
@@ -123,9 +121,7 @@ $$ B = 8A $$
 Sustituyendo en \(-4A - B = 2\):
 
 $$ -4A - 8A = 2 $$
-
 $$ -12A = 2 $$
-
 $$ A = -\frac{1}{6} $$
 
 $$ B = 8A = -\frac{4}{3} $$
@@ -133,21 +129,15 @@ $$ B = 8A = -\frac{4}{3} $$
 Y:
 
 $$ C = 2 - A - B $$
-
 $$ C = 2 - \left(-\frac{1}{6}\right) - \left(-\frac{4}{3}\right) $$
-
 $$ C = 2 + \frac{1}{6} + \frac{4}{3} $$
-
 $$ C = 2 + \frac{1 + 8}{6} $$
-
 $$ C = 2 + \frac{3}{2} = \frac{7}{2} $$
 
 Por lo tanto:
 
 $$ A = -\frac{1}{6} $$
-
 $$ B = -\frac{4}{3} $$
-
 $$ C = \frac{7}{2} $$
 
 ### 2. Transformada Inversa de Laplace
