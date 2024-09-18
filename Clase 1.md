@@ -42,12 +42,8 @@ En este curso se utilizarán ecuaciones matemáticas para modelar sistemas diná
 
 $$ \tau \frac{dy(t)}{dt} + y(t) = K u(t) $$
 
-Donde:
-- \( \tau \) es la constante de tiempo.
-- \( y(t) \) es la salida del sistema.
-- \( u(t) \) es la entrada al sistema.
 
-## 6. Referencias
+## 5. Referencias
   
   - Ogata K. Sistemas Dinámicos.
   - Ogata, K. Ingeniería de Control Moderna.
