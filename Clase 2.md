@@ -82,15 +82,15 @@ Comparando los coeficientes con \(2s^2 - 4\):
 
 1. **Coeficiente de \(s^2\)**:
 
-   $$ A + B + C = 2 $$
+   A + B + C = 2 
 
 2. **Coeficiente de \(s\)**:
 
-   $$ -5A - 2B - C = 0 $$
+   -5A - 2B - C = 0 
 
 3. **Término constante**:
 
-   $$ 6A - 3B - 2C = -4 $$
+   6A - 3B - 2C = -4 
 
 Resolvemos este sistema de ecuaciones:
 
