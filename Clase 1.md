@@ -45,5 +45,5 @@
 ### Apunte:
 - Formato (Markdown)
 - Completos, 2 Ejercicios Aparte
-- **GitHub**  
-  **Entrega**
+- **Entrega** **GitHub**  
+  
