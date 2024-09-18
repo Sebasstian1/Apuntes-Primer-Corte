@@ -12,7 +12,7 @@ Descomponemos la función en fracciones parciales:
 
 \[ \frac{s^2 + 2s + 3}{(s^2 + 2s + 2)(s^2 + 2s + 5)} = \frac{As + B}{s^2 + 2s + 2} + \frac{Cs + D}{s^2 + 2s + 5} \]
 
-Multiplicamos ambos lados por el denominador común y agrupamos términos similares:
+Multiplicamos ambos lados por el denominador común:
 
 \[ s^2 + 2s + 3 = (As + B)(s^2 + 2s + 5) + (Cs + D)(s^2 + 2s + 2) \]
 
