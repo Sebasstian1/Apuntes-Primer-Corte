@@ -217,22 +217,23 @@ $$
 Tomamos la transformada inversa de Laplace:
 
 $$
-\mathcal{L}^{-1}\left\{\frac{-\frac{1}{6}}{s + 1}\right\} = -\frac{1}{6}e^{-t}
+\mathcal{L}^{-1} \left\{ \frac{-\frac{1}{6}}{s + 1} \right\} = -\frac{1}{6} e^{-t}
 $$
 
 $$
-\mathcal{L}^{-1}\left\{\frac{-\frac{4}{3}}{s - 2}\right\} = -\frac{4}{3}e^{2t}
+\mathcal{L}^{-1} \left\{ \frac{-\frac{4}{3}}{s - 2} \right\} = -\frac{4}{3} e^{2t}
 $$
 
 $$
-\mathcal{L}^{-1}\left\{\frac{\frac{7}{2}}{s - 3}\right\} = \frac{7}{2}e^{3t}
+\mathcal{L}^{-1} \left\{ \frac{\frac{7}{2}}{s - 3} \right\} = \frac{7}{2} e^{3t}
 $$
 
 Por lo tanto, la solución en el dominio del tiempo es:
 
 $$
-y(t) = -\frac{1}{6}e^{-t} - \frac{4}{3}e^{2t} + \frac{7}{2}e^{3t}
+y(t) = -\frac{1}{6} e^{-t} - \frac{4}{3} e^{2t} + \frac{7}{2} e^{3t}
 $$
+
 
 
 ## 5. Conclusiones
