@@ -148,11 +148,11 @@ $$ \frac{2s^2 - 4}{(s + 1)(s - 2)(s - 3)} = \frac{-\frac{1}{6}}{s + 1} + \frac{-
 
 Tomamos la transformada inversa de Laplace:
 
-$$ L^{-1} \left\{ \frac{-\frac{1}{6}}{s + 1} \right\} = -\frac{1}{6} e^{-t} $$
+$$ L^{-1} \left( \frac{-\frac{1}{6}}{s + 1} \right) = -\frac{1}{6} e^{-t} $$
 
-$$ L^{-1} \left\{ \frac{-\frac{4}{3}}{s - 2} \right\} = -\frac{4}{3} e^{2t} $$
+$$ L^{-1} \left( \frac{-\frac{4}{3}}{s - 2} \right) = -\frac{4}{3} e^{2t} $$
 
-$$ L^{-1} \left\{ \frac{\frac{7}{2}}{s - 3} \right\} = \frac{7}{2} e^{3t} $$
+$$ L^{-1} \left( \frac{\frac{7}{2}}{s - 3} \right) = \frac{7}{2} e^{3t} $$
 
 Por lo tanto, la solución en el dominio del tiempo es:
 
@@ -165,4 +165,4 @@ En esta clase hemos revisado las herramientas básicas para trabajar con sistema
 ## 6. Referencias
 
 - Ogata, K. *Ingeniería de Control Moderna*.
-- Smith, C. A., & Corripio, A. B. *Control Automático de Procesos*.
+- Smith, C. A., & Corripio, A
