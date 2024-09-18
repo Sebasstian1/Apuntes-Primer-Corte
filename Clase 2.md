@@ -27,7 +27,7 @@ Las derivadas parciales son fundamentales para describir sistemas dinámicos cua
 
 💡 **Ejemplo 1**: Derivada parcial de una función `f(x, t)`
 
-`∂/∂t f = α ∂/∂x f + β f(x)`
+`∂f / ∂t = α (∂f / ∂x) + β f(x)`
 
 ### 3.2 Transformada de Laplace
 La transformada de Laplace es una técnica importante para la solución de ecuaciones diferenciales. Es útil para sistemas lineales y puede simplificar problemas que involucran derivadas.
@@ -41,7 +41,7 @@ En sistemas más complejos, como los representados por varias ecuaciones diferen
 
 💡 **Ejemplo 3**:
 
-`A · X(s) = B · U(s) + C · Y(s)`
+`A * X(s) = B * U(s) + C * Y(s)`
 
 Donde:
 - `A`, `B`, `C` son matrices.
@@ -52,7 +52,7 @@ En algunos casos, se deben eliminar variables para simplificar la resolución de
 
 💡 **Ejemplo 4**: Eliminación de variables en un sistema de ecuaciones
 
-`X(s) = A(s) · U(s) - B(s) · Y(s)`
+`X(s) = A(s) * U(s) - B(s) * Y(s)`
 
 ## 4. Ejemplos
 
@@ -75,6 +75,8 @@ Multiplicamos ambos lados por el denominador común `(s + 1)(s - 2)(s - 3)` para
 Expandimos y agrupamos términos:
 
 `2s^2 - 4 = A(s^2 - 5s + 6) + B(s^2 - 2s - 3) + C(s^2 - s - 2)`
+
+Agrupamos términos similares:
 
 `2s^2 - 4 = (A + B + C)s^2 + (-5A - 2B - C)s + (6A - 3B - 2C)`
 
@@ -100,15 +102,19 @@ De `A + B + C = 2`:
 
 Sustituyendo en las otras dos ecuaciones:
 
-    `-5A - 2B - (2 - A - B) = 0`
-    `-5A - 2B - 2 + A + B = 0`
-    `-4A - B = 2`
+`-5A - 2B - (2 - A - B) = 0`
+
+`-5A - 2B - 2 + A + B = 0`
+
+`-4A - B = 2`
 
 Y:
 
-    `6A - 3B - 2(2 - A - B) = -4`
-    `6A - 3B - 4 + 2A + 2B = -4`
-    `8A - B = 0`
+`6A - 3B - 2(2 - A - B) = -4`
+
+`6A - 3B - 4 + 2A + 2B = -4`
+
+`8A - B = 0`
 
 Resolviendo el sistema:
 
@@ -119,17 +125,23 @@ De `8A - B = 0`:
 Sustituyendo en `-4A - B = 2`:
 
     `-4A - 8A = 2`
+
     `-12A = 2`
+
     `A = -1/6`
 
-    `B = 8A = 8 * (-1/6) = -4/3`
+    `B = 8A = -4/3`
 
 Y:
 
     `C = 2 - A - B`
+
     `C = 2 - (-1/6) - (-4/3)`
+
     `C = 2 + 1/6 + 4/3`
+
     `C = 2 + (1 + 8) / 6`
+
     `C = 2 + 3/2 = 7/2`
 
 Por lo tanto:
