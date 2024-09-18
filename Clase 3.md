@@ -1,49 +1,81 @@
-# Ejercicio 1
+# Resolución de Ecuaciones por Fracciones Parciales y Transformada Inversa de Laplace
 
-Dada la función de transferencia:
+## Ejercicio 1
 
-(s^2 + 2s + 3) / ((s^2 + 2s + 2)(s^2 + 2s + 5))
+Dada la función:
 
-La descomposición en fracciones parciales es:
+\[ \frac{s^2 + 2s + 3}{(s^2 + 2s + 2)(s^2 + 2s + 5)} \]
 
-(s^2 + 2s + 3) / ((s^2 + 2s + 2)(s^2 + 2s + 5)) = 2 / (3(s^2 + 2s + 5)) + 1 / (3(s^2 + 2s + 2))
+### Descomposición en Fracciones Parciales
 
-**Transformada inversa de Laplace para cada término**:
+Primero, descomponemos la función en fracciones parciales:
 
-1. Para el término `2 / (3(s^2 + 2s + 5))`, la transformada inversa de Laplace es:
+\[ \frac{s^2 + 2s + 3}{(s^2 + 2s + 2)(s^2 + 2s + 5)} = \frac{As + B}{s^2 + 2s + 2} + \frac{Cs + D}{s^2 + 2s + 5} \]
 
-    (2 / 3) * e^(-t) * sin(2t)
+Multiplicamos ambos lados por el denominador común y agrupamos términos similares:
 
-2. Para el término `1 / (3(s^2 + 2s + 2))`, la transformada inversa de Laplace es:
+\[ s^2 + 2s + 3 = (As + B)(s^2 + 2s + 5) + (Cs + D)(s^2 + 2s + 2) \]
 
-    (1 / 3) * e^(-t) * sin(t)
+Resolviendo para \(A\), \(B\), \(C\) y \(D\), obtenemos:
 
-La solución final en el dominio del tiempo es la suma de estos dos términos:
+\[ A = 1, \, B = 1, \, C = -1, \, D = 2 \]
 
-f(t) = (2 / 3) * e^(-t) * sin(2t) + (1 / 3) * e^(-t) * sin(t)
+Por lo tanto:
 
----
+\[ \frac{s^2 + 2s + 3}{(s^2 + 2s + 2)(s^2 + 2s + 5)} = \frac{s + 1}{s^2 + 2s + 2} - \frac{s - 2}{s^2 + 2s + 5} \]
 
-# Ejercicio 2
+### Transformada Inversa de Laplace
 
-Dada la función de transferencia:
+Para encontrar la transformada inversa de Laplace, utilizamos tablas estándar:
 
-(s + 3) / ((s + 1)(s + 2))
+- Para \( \frac{s + 1}{s^2 + 2s + 2} \), tenemos:
+  
+  \[ \mathcal{L}^{-1} \left\{ \frac{s + 1}{s^2 + 2s + 2} \right\} = e^{-t} \cos(t) \]
 
-La descomposición en fracciones parciales es:
+- Para \( \frac{s - 2}{s^2 + 2s + 5} \), tenemos:
+  
+  \[ \mathcal{L}^{-1} \left\{ \frac{s - 2}{s^2 + 2s + 5} \right\} = e^{-t} \left[ \cos(2t) + \frac{1}{2} \sin(2t) \right] \]
 
-(s + 3) / ((s + 1)(s + 2)) = 2 / (s + 1) - 1 / (s + 2)
+Entonces, la transformada inversa completa es:
 
-**Transformada inversa de Laplace**:
+\[ \mathcal{L}^{-1} \left\{ \frac{s^2 + 2s + 3}{(s^2 + 2s + 2)(s^2 + 2s + 5)} \right\} = e^{-t} \cos(t) - e^{-t} \left[ \cos(2t) + \frac{1}{2} \sin(2t) \right] \]
 
-1. Para el término `2 / (s + 1)`, la transformada inversa de Laplace es:
+## Ejercicio 2
 
-    2 * e^(-t)
+Dada la función:
 
-2. Para el término `1 / (s + 2)`, la transformada inversa de Laplace es:
+\[ \frac{s + 3}{(s + 1)(s + 2)} \]
 
-    e^(-2t)
+### Descomposición en Fracciones Parciales
 
-La solución final en el dominio del tiempo es:
+Descomponemos la función en fracciones parciales:
 
-f(t) = 2 * e^(-t) - e^(-2t)
+\[ \frac{s + 3}{(s + 1)(s + 2)} = \frac{A}{s + 1} + \frac{B}{s + 2} \]
+
+Multiplicamos ambos lados por el denominador común y resolvemos para \(A\) y \(B\):
+
+\[ s + 3 = A(s + 2) + B(s + 1) \]
+
+Resolviendo para \(A\) y \(B\), obtenemos:
+
+\[ A = 1, \, B = 2 \]
+
+Por lo tanto:
+
+\[ \frac{s + 3}{(s + 1)(s + 2)} = \frac{1}{s + 1} + \frac{2}{s + 2} \]
+
+### Transformada Inversa de Laplace
+
+Para encontrar la transformada inversa de Laplace, utilizamos tablas estándar:
+
+- Para \( \frac{1}{s + 1} \), tenemos:
+  
+  \[ \mathcal{L}^{-1} \left\{ \frac{1}{s + 1} \right\} = e^{-t} \]
+
+- Para \( \frac{2}{s + 2} \), tenemos:
+  
+  \[ \mathcal{L}^{-1} \left\{ \frac{2}{s + 2} \right\} = 2e^{-2t} \]
+
+Entonces, la transformada inversa completa es:
+
+\[ \mathcal{L}^{-1} \left\{ \frac{s + 3}{(s + 1)(s + 2)} \right\} = e^{-t} + 2e^{-2t} \]
