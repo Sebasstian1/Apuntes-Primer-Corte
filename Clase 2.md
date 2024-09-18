@@ -10,12 +10,14 @@ En esta clase, cubriremos los conceptos básicos de derivadas parciales y transf
 
 🔑 **Derivada parcial**: la derivada de una función con respecto a una variable, manteniendo las demás constantes.
 
-> Las derivadas parciales se denotan como:  
+> Las derivadas parciales se denotan como:
+> 
 > $$ \frac{\partial f}{\partial x} $$
 
 🔑 **Transformada de Laplace**: herramienta que convierte ecuaciones diferenciales en ecuaciones algebraicas, facilitando su resolución en el dominio de la frecuencia.
 
 > La transformada de Laplace de una función \( f(t) \) está definida como:  
+> 
 > $$ L\{f(t)\} = \int_{0}^{\infty} f(t) e^{-st} dt $$
 
 ## 3. Teoría
@@ -23,22 +25,24 @@ En esta clase, cubriremos los conceptos básicos de derivadas parciales y transf
 ### 3.1 Derivadas parciales
 Las derivadas parciales son fundamentales para describir sistemas dinámicos cuando las variables dependen de más de un parámetro. A continuación se presentan algunas de las fórmulas clave.
 
-💡 Ejemplo 1: Derivada parcial de una función \( f(x, t) \)
+💡 **Ejemplo 1**: Derivada parcial de una función \( f(x, t) \)
+
 $$ \frac{\partial}{\partial t} f = \alpha \frac{\partial}{\partial x} f + \beta f(x) $$
 
 ### 3.2 Transformada de Laplace
 La transformada de Laplace es una técnica importante para la solución de ecuaciones diferenciales. Es útil para sistemas lineales y puede simplificar problemas que involucran derivadas.
 
-💡 Ejemplo 2: Si tenemos una función \( x(t) \), su transformada de Laplace es:
+💡 **Ejemplo 2**: Si tenemos una función \( x(t) \), su transformada de Laplace es:
+
 $$ X(s) = \int_{0}^{\infty} x(t) e^{-st} dt $$
 
 ### 3.3 Ecuaciones diferenciales con matrices
 En sistemas más complejos, como los representados por varias ecuaciones diferenciales interconectadas, es común utilizar matrices para organizarlas.
 
-💡 Ejemplo 3:
-$$
-A \cdot X(s) = B \cdot U(s) + C \cdot Y(s)
-$$
+💡 **Ejemplo 3**:
+
+$$ A \cdot X(s) = B \cdot U(s) + C \cdot Y(s) $$
+
 Donde:
 - \( A, B, C \) son matrices.
 - \( X(s), U(s), Y(s) \) son vectores de las variables en el dominio de la frecuencia.
@@ -46,13 +50,15 @@ Donde:
 ### 3.4 Eliminación de variables
 En algunos casos, se deben eliminar variables para simplificar la resolución de las ecuaciones. Por ejemplo, se pueden reordenar las ecuaciones para expresar una variable en función de otras y resolver el sistema paso a paso.
 
-💡 Ejemplo 4: Eliminación de variables en un sistema de ecuaciones
+💡 **Ejemplo 4**: Eliminación de variables en un sistema de ecuaciones
+
 $$ X(s) = A(s) \cdot U(s) - B(s) \cdot Y(s) $$
 
 ## 4. Ejemplos
 
-💡 Ejemplo 5:
+💡 **Ejemplo 5**:
 Resuelve el siguiente sistema utilizando matrices:
+
 \[
 \begin{align*}
 2s U & = A(s_1 + s_2)(s - 1) + B(s_3)(s - 3) \\
