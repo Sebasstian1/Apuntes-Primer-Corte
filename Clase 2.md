@@ -59,17 +59,17 @@ $$ X(s) = A(s) \cdot U(s) - B(s) \cdot Y(s) $$
 💡 **Ejemplo 5**:
 Resuelve el siguiente sistema utilizando matrices:
 
-\[
+$$
 \begin{align*}
-2s U & = A(s_1 + s_2)(s - 1) + B(s_3)(s - 3) \\
-2s U & = A(s_1s_2 - 3s) + B(s_4s_5) + C(s_2 + 4)
+2s U &= A(s_1 + s_2)(s - 1) + B(s_3)(s - 3) \\
+2s U &= A(s_1s_2 - 3s) + B(s_4s_5) + C(s_2 + 4)
 \end{align*}
-\]
+$$
 
 ### Solución:
-\[
+$$
 U(s) = A \left( s_1 - 2 \right) + B \left( s_3(s - 1) \right) + C \left( s(s_2) \right)
-\]
+$$
 
 ## 5. Conclusiones
 
