@@ -47,18 +47,12 @@ Donde:
 - \( y(t) \) es la salida del sistema.
 - \( u(t) \) es la entrada al sistema.
 
-
-
-## 5. Tablas
-💡 **Ejemplo 2**:
-
-| Resultado  | Número de intentos hasta primer éxito |
-|------------|--------------------------------------|
-| S          | 1                                    |
-| FS         | 2                                    |
-| FFS        | 3                                    |
-
-_Tabla 1. Tabla de ejemplo con distribución de intentos._
+## 6. Referencias
+  
+  - Ogata K. Sistemas Dinámicos.
+  - Ogata, K. Ingeniería de Control Moderna.
+  - Smith, C. A., & Corripio, A. B. Control Automático de Procesos.
+  
 
 ## 6. Código
 💡 **Ejemplo 3**: Código simple en MATLAB para resolver una ecuación diferencial.
@@ -68,3 +62,6 @@ syms y(t)
 Dy = diff(y);
 eqn = Dy + 2*y == cos(t);
 ySol = dsolve(eqn)
+
+
+
