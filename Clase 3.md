@@ -1,4 +1,4 @@
-# Resolución de Ecuaciones por Fracciones Parciales y Transformada Inversa de Laplace
+# Solucion de Ecuaciones por Fracciones Parciales y Transformada Inversa de Laplace
 
 En esta clase realizamos dos ejercicios para practicar la descomposición en fracciones parciales y la transformada inversa de Laplace. El primer ejercicio involucra una función con denominadores cuadráticos y el segundo una función con denominadores lineales. A través de estos ejercicios, aplicamos los conceptos teóricos para resolver problemas prácticos de transformadas y fracciones parciales.
 
