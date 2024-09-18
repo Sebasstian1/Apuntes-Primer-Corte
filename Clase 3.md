@@ -8,7 +8,7 @@ Dada la función:
 
 ### Descomposición en Fracciones Parciales
 
-Primero, descomponemos la función en fracciones parciales:
+Descomponemos la función en fracciones parciales:
 
 \[ \frac{s^2 + 2s + 3}{(s^2 + 2s + 2)(s^2 + 2s + 5)} = \frac{As + B}{s^2 + 2s + 2} + \frac{Cs + D}{s^2 + 2s + 5} \]
 
@@ -18,7 +18,7 @@ Multiplicamos ambos lados por el denominador común y agrupamos términos simila
 
 Resolviendo para \(A\), \(B\), \(C\) y \(D\), obtenemos:
 
-\[ A = 1, \, B = 1, \, C = -1, \, D = 2 \]
+\[ A = 1, \quad B = 1, \quad C = -1, \quad D = 2 \]
 
 Por lo tanto:
 
@@ -28,12 +28,12 @@ Por lo tanto:
 
 Para encontrar la transformada inversa de Laplace, utilizamos tablas estándar:
 
-- Para \( \frac{s + 1}{s^2 + 2s + 2} \), tenemos:
-  
+- Para \( \frac{s + 1}{s^2 + 2s + 2} \):
+
   \[ \mathcal{L}^{-1} \left\{ \frac{s + 1}{s^2 + 2s + 2} \right\} = e^{-t} \cos(t) \]
 
-- Para \( \frac{s - 2}{s^2 + 2s + 5} \), tenemos:
-  
+- Para \( \frac{s - 2}{s^2 + 2s + 5} \):
+
   \[ \mathcal{L}^{-1} \left\{ \frac{s - 2}{s^2 + 2s + 5} \right\} = e^{-t} \left[ \cos(2t) + \frac{1}{2} \sin(2t) \right] \]
 
 Entonces, la transformada inversa completa es:
@@ -58,7 +58,7 @@ Multiplicamos ambos lados por el denominador común y resolvemos para \(A\) y \(
 
 Resolviendo para \(A\) y \(B\), obtenemos:
 
-\[ A = 1, \, B = 2 \]
+\[ A = 1, \quad B = 2 \]
 
 Por lo tanto:
 
@@ -68,12 +68,12 @@ Por lo tanto:
 
 Para encontrar la transformada inversa de Laplace, utilizamos tablas estándar:
 
-- Para \( \frac{1}{s + 1} \), tenemos:
-  
+- Para \( \frac{1}{s + 1} \):
+
   \[ \mathcal{L}^{-1} \left\{ \frac{1}{s + 1} \right\} = e^{-t} \]
 
-- Para \( \frac{2}{s + 2} \), tenemos:
-  
+- Para \( \frac{2}{s + 2} \):
+
   \[ \mathcal{L}^{-1} \left\{ \frac{2}{s + 2} \right\} = 2e^{-2t} \]
 
 Entonces, la transformada inversa completa es:
