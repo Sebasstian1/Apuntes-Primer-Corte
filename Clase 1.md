@@ -47,11 +47,9 @@ Donde:
 - \( y(t) \) es la salida del sistema.
 - \( u(t) \) es la entrada al sistema.
 
-## 5. Figuras
-![Diagrama de Bloques](./imagenes/diagrama_bloques.png)
-_Figura 1. Ejemplo de un diagrama de bloques._
 
-## 6. Tablas
+
+## 5. Tablas
 💡 **Ejemplo 2**:
 
 | Resultado  | Número de intentos hasta primer éxito |
@@ -62,7 +60,7 @@ _Figura 1. Ejemplo de un diagrama de bloques._
 
 _Tabla 1. Tabla de ejemplo con distribución de intentos._
 
-## 7. Código
+## 6. Código
 💡 **Ejemplo 3**: Código simple en MATLAB para resolver una ecuación diferencial.
 
 ```matlab
