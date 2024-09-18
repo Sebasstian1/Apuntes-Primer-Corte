@@ -1,115 +1,72 @@
-# Ejercicio: Transformada inversa de Laplace
+# Ejercicio 1
 
-## Función original
-La función a resolver es la siguiente:
-
-\[
-F(s) = \frac{s^2+2s+3}{(s^2+2s+2)(s^2+2s+5)}
-\]
-
-## 1. Descomposición en fracciones parciales
-
-Queremos expresar la función de la siguiente forma:
+Dada la función de transferencia:
 
 \[
-F(s) = \frac{As+B}{s^2+2s+2} + \frac{Cs+D}{s^2+2s+5}
+\frac{s^2+2s+3}{(s^2+2s+2)(s^2+2s+5)}
 \]
 
-Multiplicamos ambos lados por \((s^2 + 2s + 2)(s^2 + 2s + 5)\) para eliminar los denominadores:
+La descomposición en fracciones parciales es:
 
 \[
-s^2 + 2s + 3 = (As+B)(s^2 + 2s + 5) + (Cs+D)(s^2 + 2s + 2)
+\frac{s^2+2s+3}{(s^2+2s+2)(s^2+2s+5)} = \frac{2}{3(s^2 + 2s + 5)} + \frac{1}{3(s^2 + 2s + 2)}
 \]
 
-Expandiendo ambos términos:
+**Transformada inversa de Laplace para cada término**:
+
+1. Para el término \(\frac{2}{3(s^2 + 2s + 5)}\), la transformada inversa de Laplace es:
 
 \[
-s^2 + 2s + 3 = (As^3 + 2As^2 + 5As + Bs^2 + 2Bs + 5B) + (Cs^3 + 2Cs^2 + 2Cs + Ds^2 + 2Ds + 2D)
+L^{-1} \left[ \frac{2}{3(s^2 + 2s + 5)} \right] = \frac{2}{3} e^{-t} \sin(2t)
 \]
 
-Agrupamos los términos en potencias de \(s\):
+2. Para el término \(\frac{1}{3(s^2 + 2s + 2)}\), la transformada inversa de Laplace es:
 
 \[
-s^2 + 2s + 3 = (A + C)s^3 + (2A + B + 2C + D)s^2 + (5A + 2B + 2C + 2D)s + (5B + 2D)
+L^{-1} \left[ \frac{1}{3(s^2 + 2s + 2)} \right] = \frac{1}{3} e^{-t} \sin(t)
 \]
 
-Comparando los coeficientes con \(s^2 + 2s + 3\):
-
-- Coeficiente de \(s^3\):
+La solución final en el dominio del tiempo es la suma de estos dos términos:
 
 \[
-A + C = 0
+f(t) = \frac{2}{3} e^{-t} \sin(2t) + \frac{1}{3} e^{-t} \sin(t)
 \]
 
-- Coeficiente de \(s^2\):
+---
+
+# Ejercicio 2
+
+Dada la función de transferencia:
 
 \[
-2A + B + 2C + D = 1
+\frac{s+3}{(s+1)(s+2)}
 \]
 
-- Coeficiente de \(s\):
+La descomposición en fracciones parciales es:
 
 \[
-5A + 2B + 2C + 2D = 2
+\frac{s+3}{(s+1)(s+2)} = \frac{2}{s+1} - \frac{1}{s+2}
 \]
 
-- Término constante:
+**Transformada inversa de Laplace**:
+
+1. Para el término \(\frac{2}{s+1}\), la transformada inversa de Laplace es:
 
 \[
-5B + 2D = 3
+L^{-1} \left[ \frac{2}{s+1} \right] = 2 e^{-t}
 \]
 
-### Resolviendo el sistema de ecuaciones
-
-De \(A + C = 0\), tenemos que \(C = -A\). Sustituyendo en las otras ecuaciones:
-
-1. \(2A + B + 2(-A) + D = 1 \Rightarrow B + D = 1\)
-2. \(5A + 2B + 2(-A) + 2D = 2 \Rightarrow 3A + 2B + 2D = 2\)
-3. \(5B + 2D = 3\)
-
-Resolviendo este sistema obtenemos los valores de \(A\), \(B\), \(C\) y \(D\).
-
-## 2. Transformada inversa de Laplace
-
-Después de obtener los coeficientes \(A\), \(B\), \(C\) y \(D\), tomamos la transformada inversa de Laplace de cada término:
+2. Para el término \(\frac{1}{s+2}\), la transformada inversa de Laplace es:
 
 \[
-L^{-1}\left\{ \frac{As + B}{s^2 + 2s + 2} \right\} + L^{-1}\left\{ \frac{Cs + D}{s^2 + 2s + 5} \right\}
+L^{-1} \left[ \frac{1}{s+2} \right] = e^{-2t}
 \]
 
-Usamos las tablas de transformadas inversas de Laplace para resolver cada término.
+La solución final en el dominio del tiempo es:
 
-## 3. Verificación con MATLAB
+\[
+f(t) = 2 e^{-t} - e^{-2t}
+\]
 
-A continuación, te dejo el código en MATLAB para comprobar los resultados:
-
-```matlab
-% Definir las funciones simbólicas
-syms s t
-
-% Función de transferencia
-numerator = s^2 + 2*s + 3;
-denominator = (s^2 + 2*s + 2)*(s^2 + 2*s + 5);
-
-% Descomposición en fracciones parciales
-F_s = numerator / denominator;
-F_s_partial = partfrac(F_s);
-
-% Transformada inversa de Laplace
-f_t = ilaplace(F_s);
-
-% Mostrar los resultados
-disp('Fracciones parciales:');
-disp(F_s_partial);
-
-disp('Transformada inversa:');
-disp(f_t);
-
-% Graficar la solución en el dominio del tiempo
-fplot(f_t, [0 10]);
-xlabel('t');
-ylabel('f(t)');
-title('Respuesta en el dominio del tiempo');
-grid on;
 
 
