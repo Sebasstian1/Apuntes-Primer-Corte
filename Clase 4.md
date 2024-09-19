@@ -20,15 +20,15 @@ Al aplicar la segunda ley de Newton a cada una de las masas, obtenemos las sigui
 
 Para \( M_1 \), considerando la fuerza externa \( F \), la constante del resorte \( K_1 \), y el resorte entre las masas con constante \( K_2 \):
 
-\[
+$$
 M_1 \ddot{x}_1 = F - K_1 x_1 - K_2 (x_1 - x_2)
-\]
+$$
 
 Para \( M_2 \), considerando la fuerza del resorte con constante \( K_2 \) y el resorte con constante \( K_3 \):
 
-\[
+$$
 M_2 \ddot{x}_2 = -K_2 (x_2 - x_1) - K_3 x_2
-\]
+$$
 
 Estas ecuaciones son las ecuaciones diferenciales que describen el movimiento del sistema.
 
@@ -36,7 +36,7 @@ Estas ecuaciones son las ecuaciones diferenciales que describen el movimiento de
 
 Si queremos resolver estas ecuaciones, podemos organizarlas en forma matricial de la siguiente manera:
 
-\[
+$$
 \begin{pmatrix}
 M_1 & 0 \\
 0 & M_2
@@ -50,7 +50,7 @@ M_1 & 0 \\
 F - K_1 x_1 - K_2 (x_1 - x_2) \\
 -K_2 (x_2 - x_1) - K_3 x_2
 \end{pmatrix}
-\]
+$$
 
 Esta es la forma matricial del sistema de ecuaciones diferenciales.
 
@@ -64,15 +64,15 @@ Tomamos la transformada de Laplace de ambas ecuaciones suponiendo condiciones in
 
 Para \( M_1 \):
 
-\[
+$$
 M_1 s^2 X_1(s) = F(s) - K_1 X_1(s) - K_2 (X_1(s) - X_2(s))
-\]
+$$
 
 Para \( M_2 \):
 
-\[
+$$
 M_2 s^2 X_2(s) = -K_2 (X_2(s) - X_1(s)) - K_3 X_2(s)
-\]
+$$
 
 ### 4.2. Resolviendo en el dominio de Laplace
 
@@ -80,15 +80,15 @@ Reordenamos ambas ecuaciones para resolverlas simultáneamente:
 
 Para \( X_1(s) \):
 
-\[
+$$
 (M_1 s^2 + K_1 + K_2) X_1(s) - K_2 X_2(s) = F(s)
-\]
+$$
 
 Para \( X_2(s) \):
 
-\[
+$$
 -K_2 X_1(s) + (M_2 s^2 + K_2 + K_3) X_2(s) = 0
-\]
+$$
 
 Estas dos ecuaciones pueden resolverse algebraicamente para obtener \( X_1(s) \) y \( X_2(s) \), y luego se aplica la transformada inversa de Laplace para obtener las soluciones en el dominio del tiempo \( x_1(t) \) y \( x_2(t) \).
 
