@@ -20,7 +20,7 @@ y(t) = \frac{1}{2} e^t + \frac{3}{2} e^{3t} + 2t e^{3t}
    \mathcal{L}\{y''\} - 4 \mathcal{L}\{y'\} + 3 \mathcal{L}\{y\} = \mathcal{L}\{4e^{3t}\}
    \]
 
-   Dado que:
+   Donde:
 
    \[
    \mathcal{L}\{y''\} = s^2 Y(s) - sy(0) - y'(0)
@@ -185,4 +185,5 @@ y(t) = \frac{1}{2} e^t + \frac{3}{2} e^{3t} + 2t e^{3t}
    \[
    y(t) = \frac{1}{2} e^t + \frac{3}{2} e^{3t} + 2t e^{3t}
    \]
+
 
