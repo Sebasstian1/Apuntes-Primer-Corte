@@ -177,3 +177,18 @@ plot(t, y);
 xlabel('Tiempo');
 ylabel('Respuesta');
 title('Solución de la ecuación diferencial');
+
+
+### 5.2 Simulink
+Simulink es una plataforma de simulación y diseño de sistemas en MATLAB. Permite modelar, simular y analizar sistemas dinámicos utilizando diagramas de bloques. Es útil para visualizar la interacción de diferentes componentes de un sistema y para realizar análisis de respuesta en el dominio del tiempo y de la frecuencia.
+
+Introducción a Simulink:
+
+Simulink proporciona un entorno gráfico basado en bloques donde puedes arrastrar y soltar componentes para construir modelos de sistemas. Cada bloque representa un componente o una operación matemática, y las conexiones entre bloques representan las señales que fluyen a través del sistema. Esto permite a los ingenieros y científicos diseñar y probar sistemas complejos de manera intuitiva.
+
+Ejemplo:
+
+Para modelar un sistema en Simulink, creamos un modelo utilizando bloques que representan diferentes componentes del sistema (por ejemplo, sumadores, integradores, etc.) y conectamos estos bloques para formar un diagrama de flujo de señales. Luego, ejecutamos la simulación y analizamos los resultados.
+
+## 6. Conclusiones
+En la dinámica de sistemas, la comprensión de derivadas parciales, la transformada de Laplace, y el uso de herramientas como MATLAB y Simulink son fundamentales para el análisis y diseño de sistemas dinámicos. Estos conceptos y herramientas permiten modelar, simular y controlar sistemas complejos de manera efectiva, facilitando la resolución de problemas y la optimización de sistemas en diversas aplicaciones de ingeniería.
