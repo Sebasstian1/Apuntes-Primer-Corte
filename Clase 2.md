@@ -158,33 +158,22 @@ Por lo tanto, la solución en el dominio del tiempo es:
 
 $$ y(t) = -\frac{1}{6} e^{-t} - \frac{4}{3} e^{2t} + \frac{7}{2} e^{3t} $$
 
-## 5. MATLAB y Simulación
+## 5. Herramientas en MATLAB
 
-### 5.1 Uso de MATLAB
-MATLAB es una herramienta poderosa para la simulación y análisis de sistemas dinámicos. Permite realizar cálculos complejos, crear gráficos y analizar el comportamiento de sistemas a través de la programación. En el contexto de la dinámica de sistemas, MATLAB se utiliza para resolver ecuaciones diferenciales, realizar transformadas de Laplace y visualizar respuestas de sistemas.
+### 5.1 MATLAB
+MATLAB es un entorno de programación y un lenguaje de alto nivel utilizado para el análisis numérico, la visualización de datos y el desarrollo de algoritmos. Es ampliamente utilizado en ingeniería y ciencias para realizar cálculos matemáticos complejos y visualizar resultados.
 
-### 5.2 ODE45 en MATLAB
-`ODE45` es una función en MATLAB utilizada para resolver ecuaciones diferenciales ordinarias (ODE) utilizando un método de Runge-Kutta. Es ideal para problemas donde las soluciones cambian con el tiempo y proporciona resultados precisos para sistemas dinámicos complejos.
+**Introducción a MATLAB**:
+
+MATLAB proporciona una serie de funciones y herramientas para realizar cálculos matemáticos, manipular datos, y crear gráficos. Su sintaxis y entorno permiten a los usuarios desarrollar scripts y funciones que simplifican el análisis y la resolución de problemas complejos.
 
 **Ejemplo**:
 
-Para resolver una ecuación diferencial ordinaria utilizando `ODE45`, utilizamos el siguiente código en MATLAB:
+Para resolver una ecuación diferencial ordinaria en MATLAB, usamos la función `ode45` para obtener la solución numérica:
 
 ```matlab
-% Definir la función
-function dy = odefun(t, y)
-    dy = -2*y + 4*t;
-end
-
-% Parámetros iniciales
-y0 = 1;
-tspan = [0 10];
-
-% Resolver la ecuación diferencial
-[t, y] = ode45(@odefun, tspan, y0);
-
-% Graficar los resultados
-plot(t, y)
-xlabel('Tiempo')
-ylabel('Solución y')
-title('Solución de la Ecuación Diferencial')
+[t, y] = ode45(@(t, y) -2*y + sin(t), [0 10], 1);
+plot(t, y);
+xlabel('Tiempo');
+ylabel('Respuesta');
+title('Solución de la ecuación diferencial');
