@@ -39,73 +39,6 @@ Donde:
 - \(F\) es la fuerza externa aplicada a \(M_1\).
 - \(K_1\), \(K_2\), y \(K_3\) son las constantes de los resortes.
 
-### 3.2. Representación en Forma Matricial
-
-Para facilitar la resolución del sistema, podemos expresar las ecuaciones en forma matricial. Definimos el vector de desplazamientos y aceleraciones como:
-
-$$
-\mathbf{x} = \begin{pmatrix}
-x_1 \\
-x_2
-\end{pmatrix}
-$$
-
-$$
-\mathbf{\ddot{x}} = \begin{pmatrix}
-\ddot{x}_1 \\
-\ddot{x}_2
-\end{pmatrix}
-$$
-
-La representación en forma matricial de las ecuaciones de movimiento es:
-
-$$
-\mathbf{M} \mathbf{\ddot{x}} = \mathbf{F} - \mathbf{K} \mathbf{x}
-$$
-
-Donde:
-
-$$
-\mathbf{M} = \begin{pmatrix}
-M_1 & 0 \\
-0 & M_2
-\end{pmatrix}
-$$
-
-$$
-\mathbf{F} = \begin{pmatrix}
-F \\
-0
-\end{pmatrix}
-$$
-
-$$
-\mathbf{K} = \begin{pmatrix}
-K_1 + K_2 & -K_2 \\
--K_2 & K_2 + K_3
-\end{pmatrix}
-$$
-
-Entonces, la ecuación matricial es:
-
-$$
-\begin{pmatrix}
-M_1 & 0 \\
-0 & M_2
-\end{pmatrix}
-\begin{pmatrix}
-\ddot{x}_1 \\
-\ddot{x}_2
-\end{pmatrix}
-=
-\begin{pmatrix}
-F - (K_1 + K_2)x_1 + K_2 x_2 \\
--K_2 x_1 - (K_2 + K_3)x_2
-\end{pmatrix}
-$$
-
-Esta representación es útil para implementar el sistema en un programa o resolverlo numéricamente.
-
 ## 4. Ejemplo Resuelto
 
 💡 **Ejemplo 1:** Resolución del sistema de ecuaciones para un caso particular donde:
@@ -159,10 +92,9 @@ Este sistema puede ser resuelto numéricamente para obtener los desplazamientos 
 
 ## 5. Conclusiones
 
-En esta clase hemos modelado un sistema mecánico de dos masas conectadas por resortes. Hemos deducido las ecuaciones de movimiento tanto de forma directa como en forma matricial. Este tipo de sistemas son comunes en el estudio de la dinámica de sistemas físicos y pueden resolverse mediante métodos numéricos para obtener las trayectorias de las masas.
+En esta clase hemos modelado un sistema mecánico de dos masas conectadas por resortes. Hemos deducido las ecuaciones de movimiento de forma directa. Este tipo de sistemas son comunes en el estudio de la dinámica de sistemas físicos y pueden resolverse mediante métodos numéricos para obtener las trayectorias de las masas.
 
 ## 6. Referencias
 
 - Ogata, K. (1997). *Ingeniería de Control Moderna*. Prentice Hall.
 - Dorf, R. C., & Bishop, R. H. (2010). *Sistemas de Control Moderno*. Pearson.
-
