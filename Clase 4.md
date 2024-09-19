@@ -60,15 +60,10 @@ Donde \( b \) es el coeficiente de fricción, \( K_1 \), \( K_2 \), \( K_3 \) so
 
 ---
 
-## 4. Figuras
 
-![Diagrama de sistema mecánico](../images/sistema_mecanico.png)
+## 4. Ejercicios
 
-Figura 1. Representación del sistema mecánico.
-
-## 5. Ejercicios
-
-📚 **Ejercicio 1**: Calcular el movimiento de las masas \( M_1 \) y \( M_2 \) para un sistema donde \( K_1 = 5 \, \text{N/m} \), \( K_2 = 3 \, \text{N/m} \), \( K_3 = 4 \, \text{N/m} \), y no hay fricción (\( b = 0 \)).
+📚 **Ejercicio 1**: Calcular el movimiento de las masas \( M_1 \) y \( M_2 \) para un sistema donde \( K_1 = 5 \, ), \( K_2 = 3 \, ), \( K_3 = 4 \, ), y no hay fricción (\( b = 0 \)).
 
 **Solución**:
 
@@ -108,11 +103,11 @@ Esto indica que el sistema está en equilibrio cuando ambas masas están en repo
 
 ---
 
-## 6. Conclusiones
+## 5. Conclusiones
 
 En esta clase hemos aprendido a modelar sistemas mecánicos utilizando ecuaciones de movimiento para masas conectadas por resortes. Hemos visto cómo derivar las ecuaciones de equilibrio y analizar las condiciones bajo las cuales el sistema puede estar en reposo. Además, hemos aplicado estas ecuaciones a ejemplos numéricos para entender mejor el comportamiento dinámico del sistema.
 
-## 7. Referencias
+## 6. Referencias
 
 1. "Dinámica de sistemas mecánicos", Autor Desconocido.
 2. "Modelado y Simulación de Sistemas Mecánicos", por X Autor.
