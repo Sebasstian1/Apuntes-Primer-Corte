@@ -12,12 +12,36 @@ y(t) = \frac{1}{2} e^t + \frac{3}{2} e^{3t} + 2t e^{3t}
 
 ### Paso a Paso
 
-1. **Transformada de Laplace:**
+1. **Aplicar la Transformada de Laplace:**
 
    Aplicamos la transformada de Laplace a ambos lados de la ecuación diferencial:
 
    \[
-   s^2 Y(s) - sy(0) - y'(0) - 4(s Y(s) - y(0)) + 3Y(s) = \frac{4}{s-3}
+   \mathcal{L}\{y''\} - 4 \mathcal{L}\{y'\} + 3 \mathcal{L}\{y\} = \mathcal{L}\{4e^{3t}\}
+   \]
+
+   Dado que:
+
+   \[
+   \mathcal{L}\{y''\} = s^2 Y(s) - sy(0) - y'(0)
+   \]
+
+   \[
+   \mathcal{L}\{y'\} = s Y(s) - y(0)
+   \]
+
+   \[
+   \mathcal{L}\{y\} = Y(s)
+   \]
+
+   \[
+   \mathcal{L}\{4e^{3t}\} = \frac{4}{s-3}
+   \]
+
+   Sustituyendo en la ecuación:
+
+   \[
+   (s^2 Y(s) - sy(0) - y'(0)) - 4(s Y(s) - y(0)) + 3Y(s) = \frac{4}{s-3}
    \]
 
    Sustituyendo \( y(0) = 2 \) y \( y'(0) = 7 \):
@@ -29,27 +53,109 @@ y(t) = \frac{1}{2} e^t + \frac{3}{2} e^{3t} + 2t e^{3t}
    Simplificando:
 
    \[
-   (s^2 - 4s + 3)Y(s) - 2s + 1 = \frac{4}{s-3}
+   s^2 Y(s) - 2s - 7 - 4s Y(s) + 8 + 3Y(s) = \frac{4}{s-3}
+   \]
+
+   \[
+   (s^2 - 4s + 3) Y(s) - 2s + 1 = \frac{4}{s-3}
    \]
 
    Despejando \( Y(s) \):
 
    \[
-   Y(s) = \frac{4}{(s-3)^2(s-1)} + \frac{2s - 1}{(s-1)(s-3)}
+   Y(s) = \frac{4}{(s-3)(s^2 - 4s + 3)} + \frac{2s - 1}{s^2 - 4s + 3}
    \]
 
 2. **Descomposición en Fracciones Parciales:**
 
-   Para la fracción:
+   Factorizamos el denominador \( s^2 - 4s + 3 \):
+
+   \[
+   s^2 - 4s + 3 = (s-1)(s-3)
+   \]
+
+   Entonces:
+
+   \[
+   Y(s) = \frac{4}{(s-3)^2(s-1)} + \frac{2s - 1}{(s-1)(s-3)}
+   \]
+
+   Para descomponer \( \frac{2s - 1}{(s-1)(s-3)} \):
+
+   \[
+   \frac{2s - 1}{(s-1)(s-3)} = \frac{A}{s-1} + \frac{B}{s-3}
+   \]
+
+   Multiplicamos por el denominador común \( (s-1)(s-3) \):
+
+   \[
+   2s - 1 = A(s-3) + B(s-1)
+   \]
+
+   Resolviendo para \( A \) y \( B \):
+
+   Comparando coeficientes:
+
+   \[
+   2s - 1 = (A + B)s - (3A + B)
+   \]
+
+   \[
+   A + B = 2
+   \]
+
+   \[
+   -3A - B = -1
+   \]
+
+   Resolviendo el sistema:
+
+   \[
+   A = 1 \quad \text{y} \quad B = 1
+   \]
+
+   Entonces:
 
    \[
    \frac{2s - 1}{(s-1)(s-3)} = \frac{1}{s-1} + \frac{1}{s-3}
    \]
 
-   Y:
+   Para \( \frac{4}{(s-3)^2(s-1)} \):
+
+   Descomponemos en fracciones parciales:
 
    \[
-   \frac{4}{(s-3)^2(s-1)} = \frac{2}{(s-3)^2} + \frac{1}{s-1}
+   \frac{4}{(s-3)^2(s-1)} = \frac{A}{s-1} + \frac{B}{s-3} + \frac{C}{(s-3)^2}
+   \]
+
+   Multiplicamos por el denominador común:
+
+   \[
+   4 = A(s-3)^2 + B(s-3)(s-1) + C(s-1)
+   \]
+
+   Comparando coeficientes, encontramos:
+
+   \[
+   A = 2, \quad B = 0, \quad C = -2
+   \]
+
+   Entonces:
+
+   \[
+   \frac{4}{(s-3)^2(s-1)} = \frac{2}{(s-3)^2} + \frac{-2}{s-1}
+   \]
+
+   Finalmente:
+
+   \[
+   Y(s) = \left(\frac{2}{(s-3)^2} + \frac{-2}{s-1}\right) + \left(\frac{1}{s-1} + \frac{1}{s-3}\right)
+   \]
+
+   Simplificando:
+
+   \[
+   Y(s) = \frac{2}{(s-3)^2} + \frac{1}{s-1} + \frac{1}{s-3}
    \]
 
 3. **Transformada Inversa de Laplace:**
@@ -79,3 +185,4 @@ y(t) = \frac{1}{2} e^t + \frac{3}{2} e^{3t} + 2t e^{3t}
    \[
    y(t) = \frac{1}{2} e^t + \frac{3}{2} e^{3t} + 2t e^{3t}
    \]
+
