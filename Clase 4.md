@@ -1,113 +1,121 @@
-# Dinámica de sistemas
+# Dinámica de Sistemas Mecánicos
 
-En esta clase se aborda la dinámica de sistemas mecánicos, la cual estudia el comportamiento de sistemas físicos bajo la acción de fuerzas. Utilizaremos modelos de masa-resorte y analizaremos las ecuaciones de movimiento para describir el comportamiento dinámico de estos sistemas. Se introducen también conceptos como MISO (Multiple Input, Single Output) y SISO (Single Input, Single Output), utilizados en el análisis de sistemas.
+Este documento trata sobre el análisis de un sistema mecánico compuesto por dos masas conectadas a resortes, considerando la dinámica de este sistema bajo la aplicación de una fuerza externa a una de las masas. El objetivo es modelar el sistema con ecuaciones de movimiento y resolver el sistema de ecuaciones. En este caso, no existe fricción en el sistema, y se aplica una fuerza externa \( F \) sobre la masa \( M_1 \).
 
-## 1. Modelado de sistemas mecánicos
+## 1. Modelo del Sistema
 
-Un sistema mecánico puede representarse mediante modelos de masa-resorte como se muestra en la siguiente figura:
+Se trata de un sistema de dos grados de libertad (DOF) con masas conectadas por resortes. La masa \( M_1 \) está sujeta a una fuerza externa \( F \), y ambas masas están conectadas a resortes con constantes \( K_1 \), \( K_2 \), y \( K_3 \). El sistema no tiene fricción. Las posiciones de las masas están dadas por \( x_1 \) para \( M_1 \) y \( x_2 \) para \( M_2 \).
 
-- \( M_1 \) y \( M_2 \) son las masas en el sistema.
-- \( K_1 \), \( K_2 \) y \( K_3 \) representan las constantes de los resortes.
-- Las fuerzas \( F_{K1} \), \( F_{K2} \) y \( F_{R} \) actúan sobre las masas.
+### 1.1. Diagrama del sistema
+
+El siguiente esquema ilustra el sistema mecánico con las fuerzas actuantes:
+
+![Sistema mecánico](./images/sistema_mecanico.png)
+
+**Figura 1.** Sistema de dos masas conectadas a resortes.
 
 ## 2. Definiciones
 
-> 🔑 *Sistema mecánico*: conjunto de componentes físicos (masas, resortes, amortiguadores) que interactúan bajo la influencia de fuerzas externas y cumplen con las leyes del movimiento.
+> 🔑 *Sistema de masas*: Es un conjunto de masas conectadas entre sí mediante elementos elásticos (resortes) o amortiguadores que pueden ser modeladas mediante ecuaciones diferenciales.
+>
+> 🔑 *Resorte*: Es un elemento elástico cuya fuerza es proporcional al desplazamiento, descrita por la ley de Hooke \( F = -kx \).
 
-> 🔑 *MISO*: (*Multiple Input, Single Output*) se refiere a un sistema con múltiples entradas y una sola salida.
+## 3. Ecuaciones del Sistema
 
-> 🔑 *SISO*: (*Single Input, Single Output*) se refiere a un sistema con una entrada y una salida.
+### 3.1. Ecuaciones de movimiento
 
-## 3. Ecuaciones del sistema
+Al aplicar la segunda ley de Newton a cada una de las masas, obtenemos las siguientes ecuaciones:
 
-Para un sistema de masa-resorte, las ecuaciones de movimiento se derivan de la segunda ley de Newton. Las ecuaciones que describen el movimiento de las masas \( M_1 \) y \( M_2 \) son las siguientes:
+Para \( M_1 \), considerando la fuerza externa \( F \), la constante del resorte \( K_1 \), y el resorte entre las masas con constante \( K_2 \):
 
-💡 **Ejemplo 1**:
+\[
+M_1 \ddot{x}_1 = F - K_1 x_1 - K_2 (x_1 - x_2)
+\]
 
-Las ecuaciones de movimiento para \( M_1 \) y \( M_2 \) se expresan como:
+Para \( M_2 \), solo considerando la fuerza del resorte con constante \( K_2 \) y el resorte con constante \( K_3 \):
 
-$$
-M_1 \ddot{x_1} = F_1 - F_{K1} - F_{R}
-$$
+\[
+M_2 \ddot{x}_2 = -K_2 (x_2 - x_1) - K_3 x_2
+\]
 
-$$
-M_2 \ddot{x_2} = F_{K2} - F_R
-$$
+Estas ecuaciones son las ecuaciones diferenciales que describen el movimiento del sistema.
 
-Donde \( F_1 \) es la fuerza externa aplicada, \( F_{K1} \), \( F_{K2} \) son las fuerzas elásticas de los resortes, y \( F_R \) es la fuerza de fricción.
+### 3.2. Resolución del sistema
 
----
+Si queremos resolver estas ecuaciones, podemos organizarlas en forma matricial de la siguiente manera:
 
-### 3.1 Ecuaciones de equilibrio
+\[
+\begin{pmatrix}
+M_1 & 0 \\
+0 & M_2
+\end{pmatrix}
+\begin{pmatrix}
+\ddot{x}_1 \\
+\ddot{x}_2
+\end{pmatrix}
+=
+\begin{pmatrix}
+F - K_1 x_1 - K_2 (x_1 - x_2) \\
+-K_2 (x_2 - x_1) - K_3 x_2
+\end{pmatrix}
+\]
 
-Para el equilibrio del sistema, las fuerzas deben balancearse. Esto da lugar a las siguientes ecuaciones:
+Esta es la forma matricial del sistema de ecuaciones diferenciales.
 
-💡 **Ejemplo 2**:
+## 4. Solución del sistema
+
+Para resolver el sistema de ecuaciones diferenciales, es necesario utilizar métodos numéricos o aplicar la transformada de Laplace. Aquí, usaremos la transformada de Laplace para resolver las ecuaciones en el dominio de la frecuencia.
+
+### 4.1. Aplicando la transformada de Laplace
+
+Tomamos la transformada de Laplace de ambas ecuaciones suponiendo condiciones iniciales \( x_1(0) = 0 \) y \( x_2(0) = 0 \):
 
 Para \( M_1 \):
 
-$$
-M_1 \ddot{x_1} = K_1 x_1 + K_2 (x_1 - x_2) - b = 0
-$$
+\[
+M_1 s^2 X_1(s) = F(s) - K_1 X_1(s) - K_2 (X_1(s) - X_2(s))
+\]
 
 Para \( M_2 \):
 
-$$
-M_2 \ddot{x_2} = K_2 (x_1 - x_2) + K_3 x_2 = 0
-$$
+\[
+M_2 s^2 X_2(s) = -K_2 (X_2(s) - X_1(s)) - K_3 X_2(s)
+\]
 
-Donde \( b \) es el coeficiente de fricción, \( K_1 \), \( K_2 \), \( K_3 \) son las constantes de los resortes, y \( x_1 \), \( x_2 \) son los desplazamientos de las masas.
+### 4.2. Resolviendo en el dominio de Laplace
 
----
+Reordenamos ambas ecuaciones para resolverlas simultáneamente:
 
+Para \( X_1(s) \):
 
-## 4. Ejercicios
+\[
+(M_1 s^2 + K_1 + K_2) X_1(s) - K_2 X_2(s) = F(s)
+\]
 
-📚 **Ejercicio 1**: Calcular el movimiento de las masas \( M_1 \) y \( M_2 \) para un sistema donde \( K_1 = 5 \, ), \( K_2 = 3 \, ), \( K_3 = 4 \, ), y no hay fricción (\( b = 0 \)).
+Para \( X_2(s) \):
 
-**Solución**:
+\[
+-K_2 X_1(s) + (M_2 s^2 + K_2 + K_3) X_2(s) = 0
+\]
 
-Para \( M_1 \):
+Estas dos ecuaciones pueden resolverse algebraicamente para obtener \( X_1(s) \) y \( X_2(s) \), y luego se aplica la transformada inversa de Laplace para obtener las soluciones en el dominio del tiempo \( x_1(t) \) y \( x_2(t) \).
 
-$$
-M_1 \ddot{x_1} = 5 x_1 + 3 (x_1 - x_2)
-$$
+## 5. Figuras
 
-Para \( M_2 \):
+A continuación, se presentan los diagramas y ecuaciones que definen el comportamiento del sistema.
 
-$$
-M_2 \ddot{x_2} = 3 (x_1 - x_2) + 4 x_2
-$$
+![Sistema mecánico con resortes y masas](./images/sistema_resortes.png)
 
-📚 **Ejercicio 2**: Determinar si el sistema tiene una solución en equilibrio, considerando que las masas \( M_1 = M_2 = 1 \, \text{kg} \).
+**Figura 2.** Sistema de masas y resortes.
 
-**Solución**:
+## 6. Conclusiones
 
-Para el equilibrio, \( \ddot{x_1} = \ddot{x_2} = 0 \). Las ecuaciones se simplifican a:
+En este análisis, hemos modelado un sistema mecánico compuesto por dos masas conectadas mediante resortes sin fricción, y bajo la acción de una fuerza externa. Las ecuaciones diferenciales obtenidas describen el movimiento de las masas en función del tiempo, y la resolución mediante la transformada de Laplace permite analizar el comportamiento del sistema en el dominio de la frecuencia.
 
-$$
-5 x_1 + 3 (x_1 - x_2) = 0
-$$
+Este tipo de modelado es fundamental en la dinámica de sistemas, ya que permite predecir el comportamiento de sistemas mecánicos complejos en diferentes condiciones. Para resolver estas ecuaciones en la práctica, a menudo se recurre a herramientas computacionales como MATLAB o Python.
 
-$$
-3 (x_1 - x_2) + 4 x_2 = 0
-$$
+## 7. Referencias
 
-Resolviendo el sistema de ecuaciones simultáneas:
-
-$$
-x_1 = x_2 = 0
-$$
-
-Esto indica que el sistema está en equilibrio cuando ambas masas están en reposo.
-
----
-
-## 5. Conclusiones
-
-En esta clase hemos aprendido a modelar sistemas mecánicos utilizando ecuaciones de movimiento para masas conectadas por resortes. Hemos visto cómo derivar las ecuaciones de equilibrio y analizar las condiciones bajo las cuales el sistema puede estar en reposo. Además, hemos aplicado estas ecuaciones a ejemplos numéricos para entender mejor el comportamiento dinámico del sistema.
-
-## 6. Referencias
-
-1. "Dinámica de sistemas mecánicos", Autor Desconocido.
-2. "Modelado y Simulación de Sistemas Mecánicos", por X Autor.
+- Sistemas mecánicos: ecuaciones de movimiento. (n.d.). Recuperado de [sitio web académico].
+- Dorf, R. C., & Bishop, R. H. (2011). *Sistemas de control moderno*. Pearson.
+- Ogata, K. (2010). *Ingeniería de control moderno*. Prentice Hall.
