@@ -1,5 +1,7 @@
 # Dinámica de Sistemas
 
+La **Dinámica de Sistemas** es una disciplina fundamental en la ingeniería que se centra en el estudio y análisis de sistemas que cambian con el tiempo. El objetivo principal de este curso es proporcionar una comprensión integral de los conceptos y herramientas necesarios para modelar, analizar y controlar sistemas dinámicos en diversos campos de la ingeniería, incluyendo mecánica, eléctrica, hidráulica y térmica. A través de la resolución de ecuaciones diferenciales, el uso de transformadas de Laplace, y la aplicación de diagramas de bloques, los estudiantes aprenderán a abordar problemas complejos y a diseñar soluciones eficientes para sistemas dinámicos.
+
 ### Pre-requisitos:
 - Ecuaciones Diferenciales
 
@@ -45,5 +47,4 @@
 ### Apunte:
 - Formato (Markdown)
 - Completos, 2 Ejercicios Aparte
-- **Entrega** **GitHub**  
-  
+- **Entrega** **GitHub**
