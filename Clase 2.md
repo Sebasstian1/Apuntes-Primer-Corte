@@ -102,15 +102,15 @@ Sustituyendo en las otras dos ecuaciones:
 
 - Para el coeficiente de \(s\):
 
-   $$ -5A - 2B - (2 - A - B) = 0 $$
-   $$ -5A - 2B - 2 + A + B = 0 $$
-   $$ -4A - B = 2 $$
+    -5A - 2B - (2 - A - B) = 0 
+    -5A - 2B - 2 + A + B = 0 
+    -4A - B = 2 
 
 - Para el término constante:
 
-   $$ 6A - 3B - 2(2 - A - B) = -4 $$
-   $$ 6A - 3B - 4 + 2A + 2B = -4 $$
-   $$ 8A - B = 0 $$
+    6A - 3B - 2(2 - A - B) = -4 
+    6A - 3B - 4 + 2A + 2B = -4 
+    8A - B = 0 
 
 Resolviendo el sistema:
 
