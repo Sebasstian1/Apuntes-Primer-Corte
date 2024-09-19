@@ -1,4 +1,4 @@
-### Solución de la Ecuación Diferencial
+### Solución de la Ecuación Diferencial 1
 
 La ecuación diferencial dada es:
 
@@ -108,7 +108,7 @@ Con las condiciones iniciales `y(0) = 2` y `y'(0) = 7`, la solución es:
     y(t) = (1/2)e^t + (3/2)e^(3t) + 2t e^(3t)
 
 
-   ### Solución de la Ecuación Diferencial
+### Solución de la Ecuación Diferencial 2
 
 La ecuación diferencial dada es:
 
@@ -169,4 +169,3 @@ Con las condiciones iniciales `y(0) = 0` y `y'(0) = 0`, la solución es:
    Por lo tanto, la solución es:
 
     y(t) = -1/8 cos(t) + 1/8 sin(t) + 1/8 e^(-2t) cos(t) + 1/8 e^(-2t) sin(t)
-
