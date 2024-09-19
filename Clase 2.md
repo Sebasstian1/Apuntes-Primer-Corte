@@ -129,10 +129,10 @@ $$ B = 8A = -\frac{4}{3} $$
 Y:
 
 $$ C = 2 - A - B $$
-$$ C = 2 - \left(-\frac{1}{6}\right) - \left(-\frac{4}{3}\right) $$
-$$ C = 2 + \frac{1}{6} + \frac{4}{3} $$
-$$ C = 2 + \frac{1 + 8}{6} $$
-$$ C = 2 + \frac{3}{2} = \frac{7}{2} $$
+$$ C = 2 -  \left(-\frac{1}{6}\right) - \left(-\frac{4}{3}\right) $$
+$$ C = 2 +  \frac{1}{6} + \frac{4}{3} $$
+$$ C = 2 +  \frac{1 + 8}{6} $$
+$$ C = 2 +  \frac{3}{2} = \frac{7}{2} $$
 
 Por lo tanto:
 
