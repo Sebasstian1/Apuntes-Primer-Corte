@@ -9,107 +9,59 @@ $$
 y(0) = 2, \quad y'(0) = 7
 $$
 
-### Paso 1: Aplicar la transformada de Laplace
-
-Aplicamos la transformada de Laplace a ambos lados de la ecuación. Recordemos las propiedades de la transformada de Laplace para derivadas:
-
-- $$\mathcal{L}\{y'(t)\} = sY(s) - y(0)$$
-- $$\mathcal{L}\{y''(t)\} = s^2Y(s) - sy(0) - y'(0)$$
-- $$\mathcal{L}\{e^{at}\} = \frac{1}{s-a}$$
-
-Aplicando la transformada de Laplace a la ecuación original:
-
+### Paso 1: Ecuación homogénea
+La ecuación homogénea es:
 $$
-\mathcal{L}\{y'' - 4y' + 3y\} = \mathcal{L}\{4e^{3t}\}
+y_h'' - 4y_h' + 3y_h = 0
 $$
-
-Esto nos da:
-
+El polinomio característico es:
 $$
-(s^2Y(s) - sy(0) - y'(0)) - 4(sY(s) - y(0)) + 3Y(s) = \frac{4}{s - 3}
+r^2 - 4r + 3 = 0
+$$
+Las raíces son \(r_1 = 1\) y \(r_2 = 3\), por lo que la solución homogénea es:
+$$
+y_h(t) = C_1 e^t + C_2 e^{3t}
 $$
 
-Sustituyendo las condiciones iniciales \(y(0) = 2\) y \(y'(0) = 7\):
-
+### Paso 2: Solución particular
+Proponemos una solución particular de la forma:
 $$
-(s^2Y(s) - 2s - 7) - 4(sY(s) - 2) + 3Y(s) = \frac{4}{s - 3}
+y_p(t) = At e^{3t}
 $$
-
-### Paso 2: Simplificar la ecuación
-
-Expandimos y simplificamos:
-
+Sustituyendo en la ecuación original y resolviendo para \(A\), obtenemos:
 $$
-s^2Y(s) - 2s - 7 - 4sY(s) + 8 + 3Y(s) = \frac{4}{s - 3}
+A = 2
 $$
-
-Agrupamos los términos con \(Y(s)\):
-
+Por lo tanto, la solución particular es:
 $$
-(s^2 - 4s + 3)Y(s) = \frac{4}{s - 3} + 2s - 1
+y_p(t) = 2t e^{3t}
 $$
 
-### Paso 3: Resolver para \(Y(s)\)
-
-Ahora despejamos \(Y(s)\):
-
+### Paso 3: Solución general
+La solución general de la ecuación es la suma de la solución homogénea y la particular:
 $$
-Y(s) = \frac{\frac{4}{s - 3} + 2s - 1}{s^2 - 4s + 3}
+y(t) = C_1 e^t + C_2 e^{3t} + 2t e^{3t}
 $$
 
-Factorizamos el denominador \(s^2 - 4s + 3 = (s - 1)(s - 3)\), y reescribimos:
+### Paso 4: Aplicar condiciones iniciales
+Usamos las condiciones iniciales \(y(0) = 2\) y \(y'(0) = 7\):
 
-$$
-Y(s) = \frac{\frac{4}{s - 3} + 2s - 1}{(s - 1)(s - 3)}
-$$
+1. Para \(y(0) = 2\):
+   $$
+   C_1 + C_2 = 2
+   $$
 
-Multiplicamos todo por \(s - 3\) para combinar términos:
+2. Para \(y'(0) = 7\):
+   $$
+   C_1 + 3C_2 + 2 = 7 \quad \Rightarrow \quad C_1 + 3C_2 = 5
+   $$
 
+Resolviendo el sistema de ecuaciones:
 $$
-Y(s) = \frac{4 + (2s - 1)(s - 3)}{(s - 1)(s - 3)}
-$$
-
-Expandimos el numerador:
-
-$$
-Y(s) = \frac{4 + (2s^2 - 6s - s + 3)}{(s - 1)(s - 3)}
-$$
-$$
-Y(s) = \frac{2s^2 - 7s + 7}{(s - 1)(s - 3)}
+C_1 = \frac{1}{2}, \quad C_2 = \frac{3}{2}
 $$
 
-### Paso 4: Transformada inversa de Laplace
-
-Finalmente, aplicamos la transformada inversa de Laplace. Para esto, descomponemos en fracciones parciales:
-
+### Solución final:
 $$
-\frac{2s^2 - 7s + 7}{(s - 1)(s - 3)} = \frac{A}{s - 1} + \frac{B}{s - 3}
+y(t) = \frac{1}{2} e^t + \frac{3}{2} e^{3t} + 2t e^{3t}
 $$
-
-Multiplicamos por el denominador común:
-
-$$
-2s^2 - 7s + 7 = A(s - 3) + B(s - 1)
-$$
-
-Resolviendo para \(A\) y \(B\), obtenemos:
-
-$$
-A = 1, \quad B = 1
-$$
-
-Por lo tanto:
-
-$$
-Y(s) = \frac{1}{s - 1} + \frac{1}{s - 3}
-$$
-
-### Paso 5: Resultado final
-
-La transformada inversa de Laplace nos da la solución:
-
-$$
-y(t) = e^t + e^{3t}
-$$
-
-Esta es la solución a la ecuación diferencial dada.
