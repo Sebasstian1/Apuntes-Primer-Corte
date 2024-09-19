@@ -1,10 +1,10 @@
-# Dinámica de sistemas
+# Dinámica de Sistemas
 
-En esta clase se estudia la dinámica de un sistema mecánico con dos masas, \(M_1\) y \(M_2\), conectadas a través de resortes de constantes \(K_1\), \(K_2\), y \(K_3\). El objetivo es formular y resolver las ecuaciones que gobiernan el movimiento de este sistema, considerando las fuerzas que actúan sobre las masas. Se parte del principio de que no existe fricción en el sistema y hay una fuerza externa aplicada a la masa \(M_1\).
+En esta clase se estudia la dinámica de un sistema mecánico con dos masas, \(M_1\) y \(M_2\), conectadas a través de resortes con constantes \(K_1\), \(K_2\), y \(K_3\). El objetivo es formular y resolver las ecuaciones que gobiernan el movimiento de este sistema, considerando las fuerzas que actúan sobre las masas. Se parte del principio de que no existe fricción en el sistema y hay una fuerza externa aplicada a la masa \(M_1\).
 
 ## 1. Introducción
 
-El análisis de sistemas mecánicos involucra la aplicación de las leyes de Newton para describir cómo las masas interactúan con las fuerzas y los elementos elásticos (resortes). En este caso, se trata de un sistema compuesto por dos masas conectadas a través de resortes en un entorno sin fricción. Se presentarán las ecuaciones del sistema, se resolverán para los desplazamientos de las masas y se explorarán diferentes configuraciones de entrada y salida.
+El análisis de sistemas mecánicos implica la aplicación de las leyes de Newton para describir cómo las masas interactúan con las fuerzas y los elementos elásticos (resortes). En este caso, se trata de un sistema compuesto por dos masas conectadas a través de resortes en un entorno sin fricción. Se presentarán las ecuaciones del sistema, se resolverán para los desplazamientos de las masas y se explorarán diferentes configuraciones de entrada y salida.
 
 ## 2. Definiciones
 
