@@ -14,7 +14,7 @@ y(t) = \frac{1}{2} e^t + \frac{3}{2} e^{3t} + 2t e^{3t}
 
 1. **Aplicar la Transformada de Laplace:**
 
-   Aplicamos la transformada de Laplace a ambos lados de la ecuación diferencial:
+   La transformada de Laplace de la ecuación diferencial es:
 
    \[
    \mathcal{L}\{y''\} - 4 \mathcal{L}\{y'\} + 3 \mathcal{L}\{y\} = \mathcal{L}\{4e^{3t}\}
@@ -44,7 +44,7 @@ y(t) = \frac{1}{2} e^t + \frac{3}{2} e^{3t} + 2t e^{3t}
    (s^2 Y(s) - sy(0) - y'(0)) - 4(s Y(s) - y(0)) + 3Y(s) = \frac{4}{s-3}
    \]
 
-   Sustituyendo \( y(0) = 2 \) y \( y'(0) = 7 \):
+   Con \( y(0) = 2 \) y \( y'(0) = 7 \):
 
    \[
    s^2 Y(s) - 2s - 7 - 4(s Y(s) - 2) + 3Y(s) = \frac{4}{s-3}
@@ -143,19 +143,19 @@ y(t) = \frac{1}{2} e^t + \frac{3}{2} e^{3t} + 2t e^{3t}
    Entonces:
 
    \[
-   \frac{4}{(s-3)^2(s-1)} = \frac{2}{(s-3)^2} + \frac{-2}{s-1}
+   \frac{4}{(s-3)^2(s-1)} = \frac{2}{(s-3)^2} - \frac{2}{s-1}
    \]
 
    Finalmente:
 
    \[
-   Y(s) = \left(\frac{2}{(s-3)^2} + \frac{-2}{s-1}\right) + \left(\frac{1}{s-1} + \frac{1}{s-3}\right)
+   Y(s) = \frac{2}{(s-3)^2} - \frac{2}{s-1} + \frac{1}{s-1} + \frac{1}{s-3}
    \]
 
    Simplificando:
 
    \[
-   Y(s) = \frac{2}{(s-3)^2} + \frac{1}{s-1} + \frac{1}{s-3}
+   Y(s) = \frac{2}{(s-3)^2} - \frac{1}{s-1} + \frac{1}{s-3}
    \]
 
 3. **Transformada Inversa de Laplace:**
@@ -185,5 +185,3 @@ y(t) = \frac{1}{2} e^t + \frac{3}{2} e^{3t} + 2t e^{3t}
    \[
    y(t) = \frac{1}{2} e^t + \frac{3}{2} e^{3t} + 2t e^{3t}
    \]
-
-
