@@ -120,4 +120,3 @@ En esta clase hemos modelado un sistema mecánico de dos masas conectadas por re
 
 - Ogata, K. (1997). *Ingeniería de Control Moderna*. Prentice Hall.
 - Dorf, R. C., & Bishop, R. H. (2010). *Sistemas de Control Moderno*. Pearson.
-
