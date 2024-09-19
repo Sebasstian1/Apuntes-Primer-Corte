@@ -54,13 +54,11 @@ $$ X(s) = A(s) \cdot U(s) - B(s) \cdot Y(s) $$
 
 ## 4. Ejemplos
 
-### Solución de la Ecuación usando Fracciones Parciales y Transformada de Laplace
+### 4.1 Descomposición en Fracciones Parciales
 
 Dada la función de transferencia:
 
 $$ \frac{2s^2 - 4}{(s + 1)(s - 2)(s - 3)} $$
-
-### 1. Descomposición en Fracciones Parciales
 
 Primero, descomponemos la función en fracciones parciales. Supongamos que:
 
@@ -82,19 +80,19 @@ Comparando los coeficientes con \(2s^2 - 4\):
 
 1. **Coeficiente de \(s^2\)**:
 
-   A + B + C = 2 
+   \( A + B + C = 2 \) 
 
 2. **Coeficiente de \(s\)**:
 
-   -5A - 2B - C = 0 
+   \( -5A - 2B - C = 0 \) 
 
 3. **Término constante**:
 
-   6A - 3B - 2C = -4 
+   \( 6A - 3B - 2C = -4 \) 
 
 Resolvemos este sistema de ecuaciones:
 
-  $$ \(A + B + C = 2\) $$
+  $$ A + B + C = 2 $$
 
 $$ C = 2 - A - B $$
 
@@ -102,15 +100,15 @@ Sustituyendo en las otras dos ecuaciones:
 
 - Para el coeficiente de \(s\):
 
-    -5A - 2B - (2 - A - B) = 0 
-    -5A - 2B - 2 + A + B = 0 
-    -4A - B = 2 
+   $$ -5A - 2B - (2 - A - B) = 0 $$
+   $$ -5A - 2B - 2 + A + B = 0 $$
+   $$ -4A - B = 2 $$
 
 - Para el término constante:
 
-    6A - 3B - 2(2 - A - B) = -4 
-    6A - 3B - 4 + 2A + 2B = -4 
-    8A - B = 0 
+   $$ 6A - 3B - 2(2 - A - B) = -4 $$
+   $$ 6A - 3B - 4 + 2A + 2B = -4 $$
+   $$ 8A - B = 0 $$
 
 Resolviendo el sistema:
 
@@ -129,10 +127,10 @@ $$ B = 8A = -\frac{4}{3} $$
 Y:
 
 $$ C = 2 - A - B $$
-$$ C = 2 -  \left(-\frac{1}{6}\right) - \left(-\frac{4}{3}\right) $$
-$$ C = 2 +  \frac{1}{6} + \frac{4}{3} $$
-$$ C = 2 +  \frac{1 + 8}{6} $$
-$$ C = 2 +  \frac{3}{2} = \frac{7}{2} $$
+$$ C = 2 - \left(-\frac{1}{6}\right) - \left(-\frac{4}{3}\right) $$
+$$ C = 2 + \frac{1}{6} + \frac{4}{3} $$
+$$ C = 2 + \frac{1 + 8}{6} $$
+$$ C = 2 + \frac{3}{2} = \frac{7}{2} $$
 
 Por lo tanto:
 
@@ -140,7 +138,7 @@ $$ A = -\frac{1}{6} $$
 $$ B = -\frac{4}{3} $$
 $$ C = \frac{7}{2} $$
 
-### 2. Transformada Inversa de Laplace
+### 4.2 Transformada Inversa de Laplace
 
 La descomposición en fracciones parciales es:
 
@@ -158,26 +156,27 @@ Por lo tanto, la solución en el dominio del tiempo es:
 
 $$ y(t) = -\frac{1}{6} e^{-t} - \frac{4}{3} e^{2t} + \frac{7}{2} e^{3t} $$
 
-## 5. Herramientas en MATLAB
+## 5. Simulación en MATLAB y Simulink
 
 ### 5.1 MATLAB
-MATLAB es un entorno de programación y un lenguaje de alto nivel utilizado para el análisis numérico, la visualización de datos y el desarrollo de algoritmos. Es ampliamente utilizado en ingeniería y ciencias para realizar cálculos matemáticos complejos y visualizar resultados.
 
-**Introducción a MATLAB**:
+MATLAB es una herramienta potente para la resolución de ecuaciones diferenciales y el análisis de sistemas dinámicos. Permite realizar cálculos simbólicos y numéricos, así como graficar funciones en el dominio del tiempo y de la frecuencia.
 
-MATLAB proporciona una serie de funciones y herramientas para realizar cálculos matemáticos, manipular datos, y crear gráficos. Su sintaxis y entorno permiten a los usuarios desarrollar scripts y funciones que simplifican el análisis y la resolución de problemas complejos.
+### 5.2 ODE45
 
+`ODE45` es una función de MATLAB para resolver sistemas de ecuaciones diferenciales ordinarias mediante el método de Runge-Kutta. Es útil para problemas que no tienen una solución analítica y permite obtener soluciones numéricas precisas.
 
-### 5.2 Simulink
-Simulink es una plataforma de simulación y diseño de sistemas en MATLAB. Permite modelar, simular y analizar sistemas dinámicos utilizando diagramas de bloques. Es útil para visualizar la interacción de diferentes componentes de un sistema y para realizar análisis de respuesta en el dominio del tiempo y de la frecuencia.
+#### Ejemplo:
 
-Introducción a Simulink:
+Para resolver la ecuación diferencial \( dy/dt = -2y + 1 \) con `ODE45`, el código en MATLAB es:
 
-Simulink proporciona un entorno gráfico basado en bloques donde puedes arrastrar y soltar componentes para construir modelos de sistemas. Cada bloque representa un componente o una operación matemática, y las conexiones entre bloques representan las señales que fluyen a través del sistema. Esto permite a los ingenieros y científicos diseñar y probar sistemas complejos de manera intuitiva.
+```matlab
+function dydt = odefun(t, y)
+    dydt = -2*y + 1;
+end
 
-Ejemplo:
-
-Para modelar un sistema en Simulink, creamos un modelo utilizando bloques que representan diferentes componentes del sistema (por ejemplo, sumadores, integradores, etc.) y conectamos estos bloques para formar un diagrama de flujo de señales. Luego, ejecutamos la simulación y analizamos los resultados.
-
-## 6. Conclusiones
-En la dinámica de sistemas, la comprensión de derivadas parciales, la transformada de Laplace, y el uso de herramientas como MATLAB y Simulink son fundamentales para el análisis y diseño de sistemas dinámicos. Estos conceptos y herramientas permiten modelar, simular y controlar sistemas complejos de manera efectiva, facilitando la resolución de problemas y la optimización de sistemas en diversas aplicaciones de ingeniería.
+[t, y] = ode45(@odefun, [0, 10], 0);
+plot(t, y)
+xlabel('Tiempo')
+ylabel('Solución y')
+title('Solución de la Ecuación Diferencial con ODE45')
