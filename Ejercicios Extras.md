@@ -106,3 +106,67 @@ Con las condiciones iniciales `y(0) = 2` y `y'(0) = 7`, la solución es:
    Simplificando:
 
     y(t) = (1/2)e^t + (3/2)e^(3t) + 2t e^(3t)
+
+
+   ### Solución de la Ecuación Diferencial
+
+La ecuación diferencial dada es:
+
+    y'' + y = e^(-2t) sin(t)
+
+Con las condiciones iniciales `y(0) = 0` y `y'(0) = 0`, la solución es:
+
+    y(t) = -1/8 cos(t) + 1/8 sin(t) + 1/8 e^(-2t) cos(t) + 1/8 e^(-2t) sin(t)
+
+### Paso a Paso
+
+1. **Aplicar la Transformada de Laplace**
+
+   Aplicamos la transformada de Laplace a la ecuación diferencial:
+
+    L{y''} + L{y} = L{e^(-2t) sin(t)}
+
+   Sabemos que:
+
+    L{y''} = s^2 Y(s) - sy(0) - y'(0)
+    L{y} = Y(s)
+    L{e^(-2t) sin(t)} = 1 / [(s + 2)^2 + 1]
+
+   Dado que `y(0) = 0` y `y'(0) = 0`, obtenemos:
+
+    s^2 Y(s) + Y(s) = 1 / [(s + 2)^2 + 1]
+    (s^2 + 1) Y(s) = 1 / [(s + 2)^2 + 1]
+    Y(s) = 1 / [(s^2 + 1) [(s + 2)^2 + 1]]
+
+2. **Descomposición en Fracciones Parciales**
+
+   Descomponemos:
+
+    1 / [(s^2 + 1) [(s + 2)^2 + 1]] = (As + B) / (s^2 + 1) + (Cs + D) / [(s + 2)^2 + 1]
+
+   Multiplicamos por el denominador común:
+
+    1 = (As + B) [(s + 2)^2 + 1] + (Cs + D) (s^2 + 1)
+
+   Expandimos y agrupamos términos para comparar coeficientes:
+
+    A = -1/8
+    B = 0
+    C = 1/8
+    D = 1/8
+
+   Por lo tanto:
+
+    Y(s) = -1/8 [1 / (s^2 + 1)] + 1/8 [(s + 2) / [(s + 2)^2 + 1]]
+
+3. **Transformada Inversa de Laplace**
+
+   Aplicamos la transformada inversa:
+
+    L^(-1){-1/8 [1 / (s^2 + 1)]} = -1/8 sin(t)
+    L^(-1){1/8 [(s + 2) / [(s + 2)^2 + 1]]} = 1/8 e^(-2t) cos(t) + 1/8 e^(-2t) sin(t)
+
+   Por lo tanto, la solución es:
+
+    y(t) = -1/8 cos(t) + 1/8 sin(t) + 1/8 e^(-2t) cos(t) + 1/8 e^(-2t) sin(t)
+
