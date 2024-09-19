@@ -6,14 +6,6 @@ Este documento trata sobre el análisis de un sistema mecánico compuesto por do
 
 Se trata de un sistema de dos grados de libertad (DOF) con masas conectadas por resortes. La masa \( M_1 \) está sujeta a una fuerza externa \( F \), y ambas masas están conectadas a resortes con constantes \( K_1 \), \( K_2 \), y \( K_3 \). El sistema no tiene fricción. Las posiciones de las masas están dadas por \( x_1 \) para \( M_1 \) y \( x_2 \) para \( M_2 \).
 
-### 1.1. Diagrama del sistema
-
-El siguiente esquema ilustra el sistema mecánico con las fuerzas actuantes:
-
-![Sistema mecánico](./images/sistema_mecanico.png)
-
-**Figura 1.** Sistema de dos masas conectadas a resortes.
-
 ## 2. Definiciones
 
 > 🔑 *Sistema de masas*: Es un conjunto de masas conectadas entre sí mediante elementos elásticos (resortes) o amortiguadores que pueden ser modeladas mediante ecuaciones diferenciales.
@@ -32,7 +24,7 @@ Para \( M_1 \), considerando la fuerza externa \( F \), la constante del resorte
 M_1 \ddot{x}_1 = F - K_1 x_1 - K_2 (x_1 - x_2)
 \]
 
-Para \( M_2 \), solo considerando la fuerza del resorte con constante \( K_2 \) y el resorte con constante \( K_3 \):
+Para \( M_2 \), considerando la fuerza del resorte con constante \( K_2 \) y el resorte con constante \( K_3 \):
 
 \[
 M_2 \ddot{x}_2 = -K_2 (x_2 - x_1) - K_3 x_2
@@ -100,21 +92,13 @@ Para \( X_2(s) \):
 
 Estas dos ecuaciones pueden resolverse algebraicamente para obtener \( X_1(s) \) y \( X_2(s) \), y luego se aplica la transformada inversa de Laplace para obtener las soluciones en el dominio del tiempo \( x_1(t) \) y \( x_2(t) \).
 
-## 5. Figuras
-
-A continuación, se presentan los diagramas y ecuaciones que definen el comportamiento del sistema.
-
-![Sistema mecánico con resortes y masas](./images/sistema_resortes.png)
-
-**Figura 2.** Sistema de masas y resortes.
-
-## 6. Conclusiones
+## 5. Conclusiones
 
 En este análisis, hemos modelado un sistema mecánico compuesto por dos masas conectadas mediante resortes sin fricción, y bajo la acción de una fuerza externa. Las ecuaciones diferenciales obtenidas describen el movimiento de las masas en función del tiempo, y la resolución mediante la transformada de Laplace permite analizar el comportamiento del sistema en el dominio de la frecuencia.
 
 Este tipo de modelado es fundamental en la dinámica de sistemas, ya que permite predecir el comportamiento de sistemas mecánicos complejos en diferentes condiciones. Para resolver estas ecuaciones en la práctica, a menudo se recurre a herramientas computacionales como MATLAB o Python.
 
-## 7. Referencias
+## 6. Referencias
 
 - Sistemas mecánicos: ecuaciones de movimiento. (n.d.). Recuperado de [sitio web académico].
 - Dorf, R. C., & Bishop, R. H. (2011). *Sistemas de control moderno*. Pearson.
