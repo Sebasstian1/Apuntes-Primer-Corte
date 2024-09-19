@@ -43,12 +43,12 @@ Donde:
 
 💡 **Ejemplo 1:** Resolución del sistema de ecuaciones para un caso particular donde:
 
-- \(M_1 = 1 \, )
-- \(M_2 = 2 \, )
-- \(K_1 = 3 \, )
-- \(K_2 = 2 \, )
-- \(K_3 = 1 \, )
-- \(F = 10 \, )
+- \(M_1 = 1 \ )
+- \(M_2 = 2 \ )
+- \(K_1 = 3 \ )
+- \(K_2 = 2 \ )
+- \(K_3 = 1 \ )
+- \(F = 10 \ )
 
 Sustituyendo estos valores en las ecuaciones, obtenemos:
 
