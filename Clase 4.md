@@ -41,7 +41,52 @@ Donde:
 
 ### 3.2. Representación en Forma Matricial
 
-Podemos escribir estas ecuaciones en forma matricial para facilitar su resolución:
+Para facilitar la resolución del sistema, podemos expresar las ecuaciones en forma matricial. Definimos el vector de desplazamientos y aceleraciones como:
+
+$$
+\mathbf{x} = \begin{pmatrix}
+x_1 \\
+x_2
+\end{pmatrix}
+$$
+
+$$
+\mathbf{\ddot{x}} = \begin{pmatrix}
+\ddot{x}_1 \\
+\ddot{x}_2
+\end{pmatrix}
+$$
+
+La representación en forma matricial de las ecuaciones de movimiento es:
+
+$$
+\mathbf{M} \mathbf{\ddot{x}} = \mathbf{F} - \mathbf{K} \mathbf{x}
+$$
+
+Donde:
+
+$$
+\mathbf{M} = \begin{pmatrix}
+M_1 & 0 \\
+0 & M_2
+\end{pmatrix}
+$$
+
+$$
+\mathbf{F} = \begin{pmatrix}
+F \\
+0
+\end{pmatrix}
+$$
+
+$$
+\mathbf{K} = \begin{pmatrix}
+K_1 + K_2 & -K_2 \\
+-K_2 & K_2 + K_3
+\end{pmatrix}
+$$
+
+Entonces, la ecuación matricial es:
 
 $$
 \begin{pmatrix}
@@ -54,8 +99,8 @@ M_1 & 0 \\
 \end{pmatrix}
 =
 \begin{pmatrix}
-F - K_1 x_1 - K_2 (x_1 - x_2) \\
--K_2 (x_2 - x_1) - K_3 x_2
+F - (K_1 + K_2)x_1 + K_2 x_2 \\
+-K_2 x_1 - (K_2 + K_3)x_2
 \end{pmatrix}
 $$
 
