@@ -167,17 +167,6 @@ MATLAB es un entorno de programación y un lenguaje de alto nivel utilizado para
 
 MATLAB proporciona una serie de funciones y herramientas para realizar cálculos matemáticos, manipular datos, y crear gráficos. Su sintaxis y entorno permiten a los usuarios desarrollar scripts y funciones que simplifican el análisis y la resolución de problemas complejos.
 
-**Ejemplo**:
-
-Para resolver una ecuación diferencial ordinaria en MATLAB, usamos la función `ode45` para obtener la solución numérica:
-
-```matlab
-[t, y] = ode45(@(t, y) -2*y + sin(t), [0 10], 1);
-plot(t, y);
-xlabel('Tiempo');
-ylabel('Respuesta');
-title('Solución de la ecuación diferencial');
-
 
 ### 5.2 Simulink
 Simulink es una plataforma de simulación y diseño de sistemas en MATLAB. Permite modelar, simular y analizar sistemas dinámicos utilizando diagramas de bloques. Es útil para visualizar la interacción de diferentes componentes de un sistema y para realizar análisis de respuesta en el dominio del tiempo y de la frecuencia.
